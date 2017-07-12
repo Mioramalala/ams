@@ -1,0 +1,61 @@
+.choix_menu_rsci img{
+	vertical-align:middle;	
+   border-radius: 100px;
+   padding: 4px;
+   margin-right: 15px;
+   
+   transition: box-shadow 0.4s, color 0.4s,padding 0.4s; 
+   -webkit-transition: box-shadow 0.4s, color 0.4s,padding 0.4s; 
+   -moz-transition: box-shadow 0.4s, color 0.4s,padding 0.4s; 
+   -o-transition: box-shadow 0.4s, color 0.4s,padding 0.4s;
+}
+.choix_menu_rsci img:hover{
+	box-shadow: 0 0 0 4px #1e91ad;
+
+  animation:animRoule 0.5s linear;
+   -webkit-animation:animRoule 0.5s linear; 
+   -moz-animation:animRoule 0.5s linear;
+   -o-animation:animRoule 0.5s linear;
+}
+@keyframes animRoule {
+  from {background-color: #1e91ad}
+  to {box-shadow: transparent}
+}
+@-webkit-keyframes animRoule {
+  from {background-color: #1e91ad}
+  to {box-shadow: transparent}
+}
+@-moz-keyframes animRoule {
+  from {background-color: #1e91ad}
+  to {box-shadow: transparent}
+}
+@-o-keyframes animRoule {
+  from {background-color: #1e91ad}
+  to {box-shadow: transparent}
+}
+.choix_menu_rsci{
+	color: #919191;
+  font-size: 11pt;
+  font-weight: bold;
+  letter-spacing: -1px;
+  padding: 5px 40px;
+  cursor: pointer;
+}
+#fermeture_rsci {
+    height: 20px;
+    text-align: right;
+    margin-top: 10px;
+    width: 80%;
+}
+.mini_menu_tresore {
+    border: 1px solid #1E91AD;
+    border-radius: 2px;
+    padding: 31px 0;
+    text-align: center;
+    width: 49%;
+}
+.mini_menu_tresore:hover{
+    background-color: #1E91AD;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.table_parcycle {
+    border-spacing: 0;
+    float: left;
+}
+.table_parcycle td{
+	border: 1px solid #CCC;
+	font-size: 10pt;
+	text-align: center;
+}
+.table_parcycle td.entete {
+    background-color: #2CA3F3;
+    border: 1px solid #2CA3F3;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+}
+.reference td.non_vide{
+	background-color: #025388;
+	color:white;
+	border-radius: 7px 7px 0 0;
+	font-weight: bold;
+}

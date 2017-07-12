@@ -1,0 +1,293 @@
+/*==============CLASS==================*/
+.bouton{
+	background-color: #CCCCCC;
+    border: 2px solid #BFBFBF;
+    border-radius: 3px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    width: 150px;
+}
+.bouton:hover{
+	background-color: #BFBFBF;
+	border-color: #CCCCCC;
+    cursor: pointer;
+    color: white;
+}
+.bouton-pj:hover{
+	background-color: #000;
+	border-color: #CCCCCC;
+    cursor: pointer;
+    color: white;
+}
+.bouton-pj{
+	background-color: #2F2F2F;
+    border: 2px solid #BFBFBF;
+    border-radius: 4px;
+    color: white;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+}
+.cadre:hover,.cadre_h7:hover{
+	overflow: auto;
+}
+.cadre{
+	width: 930px;
+	height: 440px;
+	overflow:hidden;
+}
+.cadre_h7{
+	width: 680px;
+	height: 465px;
+	overflow:hidden;
+}
+.comment{
+	width: 98%;
+	height: 80px;
+	margin: 0 auto;
+}
+.fileUpload{
+	display: none;
+}
+.fm{
+	width: 100%;
+	height: 427px;
+	overflow: auto;
+}
+.fm table{
+	border-collapse: collapse;
+}
+.fm-titre table{
+	border-collapse: collapse;
+}
+.fm-titre{
+	width: 100%;
+}
+.fm_rep{
+	text-align: center;
+	text-transform: uppercase;
+}
+.fm_objectif{
+	text-align: center;
+}
+.fm_cmt,.fm_qst{
+	padding: 0 5px;
+}
+table.h1{
+	width: 1600px;
+	border-collapse: collapse;
+}
+.h1 td,.h2 td,.h3 td,.h4 td,.h5 td,{
+	height: 60px;
+}
+table.h2,table.h3{
+	width: 1200px;
+	border-collapse: collapse;
+}
+.h4{
+	width: 1200px;
+	border-collapse: collapse;
+}
+.h5{
+	width: 1400px;
+	border-collapse: collapse;
+}
+.h6{
+	width: 1600px;
+	border-collapse: collapse;
+}
+table.h6 td{
+	height: 10px;
+}
+table.h7 td{
+	height: 10px;
+}
+table.h8 td{
+	height: 10px;
+}
+.h7{
+	width: 1200px;
+	border-collapse: collapse;
+}
+.h8{
+	width: 400px;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+.h9{
+	width: 600px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+table.h9 td{
+	height: 70px;
+}
+tr.sous-titre{
+	background-color: #0052F8;
+	text-align: center;
+	font-weight: bold;
+	height: 10px;
+	border : 0;
+}
+tr.sous-titre td{
+	height: 10px;
+}
+.titreRenvoie{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: calibri;
+	margin: 0;
+}
+.clAccFP
+{
+	border:2px solid #ccc;
+	background-color:#6495ED;
+	width:350px;
+	height:40px;
+	border-radius:10px;
+	padding-top:15px;
+}
+.clAccFP:hover
+{
+	cursor:pointer;
+	background-color:#DDEEFF;
+}
+.indexRDC
+{
+	background-color: #DDEEFF;
+	margin: 5px 0 5px 0;
+	height: 30px;
+	width: 400px;
+	padding-top: 12px;
+}
+.indexRDC:hover
+{
+	cursor:pointer;
+}
+.tblgauche
+{
+	border-right:5px solid #ccc;
+}
+/*===========================ID========================*/
+#tblFP1
+{
+	margin-top:50px;
+}
+#ChampGauche:hover,#ChampDroite:hover{
+	overflow: auto;
+}
+#ChampGauche{
+	width:930px;
+	height:465px;
+	border:1px solid #ccc;
+	text-align: left;
+	float: left;
+	padding-left: 10px;
+	overflow:hidden;
+}
+#ChampDroite{
+	height:430px;
+	border: 0;
+	text-align: left;
+	padding-left: 10px;
+	overflow:hidden;
+	position: absolute !important;
+	left: 940px;
+	top:145px;
+	font-size: 14px;
+}
+#GranTitre
+{
+	font-size:20px;
+	background-color:#00698d;
+	height:35px;
+	padding-top:10px;
+	margin-top:0px;
+	color:#fff;
+}
+#CmtA{
+	width:300px;
+	height:70px;
+}
+#CmtA2{
+	width:300px;
+	height:70px;
+}
+#FondPRD
+{
+	margin-left:-60px;
+	border:2px solid #ccc;
+	border-radius:5px;
+	width:80%;
+}
+#titrRev
+{
+	font-weight:bold;
+	font-size:16px;
+}
+#renvoiRevAn{
+	color:#F08080;
+	margin-top:-10px;
+}
+#renvoiRevAn:hover{
+	cursor:pointer;
+	color:#fff;
+}
+#EnrAI
+{
+	float:right;
+	height:30px;
+	width:10%;
+	margin-top:-407px;
+	margin-left:-20px;
+	background-color:#ccc;
+	border:1px solid;
+	border-radius:5px;
+	padding-top:5px;
+}
+#EnrAI:hover{
+	background-color:#fff;
+	cursor:pointer;
+}
+#Preced
+{
+	float:right;
+	height:30px;
+	width:10%;
+	margin-top:-384px;
+	margin-left:-20px;
+	background-color:#ccc;
+	border:1px solid;
+	border-radius:5px;
+	padding-top:5px;
+}
+#Preced:hover{
+	background-color:#fff;
+	cursor:pointer;
+}
+#renvoiRevAnPP{
+	color: red;
+	font-weight: bold;
+	cursor: pointer;
+}
+/*================Balise===================*/
+div#titreIndex ul
+{
+	list-style-type:none;
+}
+div#titreIndex li
+{
+	font-size:14px;
+}
+td
+{
+	border: 1px solid #1a9fc0;
+	font-size: 8pt;
+}
+table{
+	border-collapse: collapse;
+}

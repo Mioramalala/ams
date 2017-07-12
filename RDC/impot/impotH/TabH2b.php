@@ -1,0 +1,114 @@
+<?php
+@session_start();
+$mission_id=@$_SESSION['idMission'];
+?>
+<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../../../css/RDC.css"/>
+		<link rel="stylesheet" href="../../../css/css.css"/>
+		<link rel="stylesheet" href="../RDC/paie/paie.css"/>
+		<script type="text/javascript" src="../../../js/jquery-1.7.2.js"></script>
+		<style type="text/css">
+			input{width: 100%;height: 100%;font-size: 8pt;}
+			/*table{border-collapse: collapse;}*/
+		</style>
+		<script>
+$(function(){
+
+		var ligne = document.getElementById('nbLignes').value;
+
+		$('#bt_supp').click(function(){
+			if(parseInt(ligne)>1){
+				var nature = document.getElementById("nature_"+ligne).value;
+				var annexe = document.getElementById("annexe_"+ligne).value;
+				delete_Input(nature, annexe, <?php echo $mission_id; ?>);
+
+				deleterow('tab_annexe');
+				ligne = parseInt(ligne)-1;
+				document.getElementById('nbLignes').value = ligne;
+			}
+		});
+		
+		$('#bt_ajout').click(function(){
+			ligne = parseInt(ligne)+1;
+
+			var tableau = document.getElementById('tab_annexe');
+			var tr = document.createElement("tr");
+			var td1 = document.createElement("td");
+			var td2 = document.createElement("td");
+			var td3 = document.createElement("td");
+			var text1 = document.createElement("textarea");
+			var text2 = document.createElement("textarea");
+
+			tr.style.backgroundColor = "white";
+
+			text1.cols = "48";
+			text2.cols = "48";
+
+			text1.id = "nature_"+ligne;
+			text2.id = "annexe_"+ligne;
+
+			td1.appendChild(text1);
+			td2.appendChild(text2);
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			tableau.appendChild(tr);
+
+			document.getElementById('nbLignes').value = ligne;
+
+		});
+});
+	function delete_Input(nature, note ,mission_id){
+		$.ajax({
+			type:'POST',
+			url:'RDC/impot/impotH/delete_Input_i4.php',
+			data:{nature:nature, note:note, mission_id:mission_id},
+			success:function(){
+			}
+		});	
+	}
+	function deleterow(tableID) {
+    var table = document.getElementById(tableID);
+    var rowCount = table.rows.length;
+    table.deleteRow(rowCount -1);
+	}
+
+</script>
+</head>
+<body>
+	<center><p class="titreRenvoie">DETAIL DES IDA</p></center>
+	<div class="cadre">
+		<table width="100%" id="tab_annexe" class="tab">
+			<tr bgcolor="#00698D">
+				<td align="center"><b>NATURE</b></td>
+				<td align="center"><b>NOTES ANNEXES</b></td>
+			</tr>
+
+			<?php
+						include '../../../connexion.php';
+				
+						$reponse=$bdd->query('select * FROM tab_i4 where MISSION_ID='.$mission_id);
+
+						(int)$ligne=1;
+
+						while($donnees=$reponse->fetch()){
+			?>
+
+			<tr bgcolor="white">
+				<td><textarea cols="48" id="<?php echo "nature_".$ligne ?>"><?php echo $donnees['NATURE'] ;?></textarea></td>
+				<td><textarea cols="48" id="<?php echo "annexe_".$ligne ?>"><?php echo $donnees['ANNEXE'] ;?></textarea></td>	
+			</tr>
+			<?php
+					$ligne = $ligne +1;
+				}
+			?>
+		</table>
+		<div style="float:right;">
+			<input type="button" id="bt_ajout" value="+" class="bouton" style="color:white; background-color:black;" />
+			<input type="button" id="bt_supp" value="-" class="bouton" style="color:white; background-color:black;"/>
+			<input type="hidden" id="nbLignes" value="<?php echo ($ligne-1)?>"/>
+		</div>
+	</div>
+	
+</body>

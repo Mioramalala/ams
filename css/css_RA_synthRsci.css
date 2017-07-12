@@ -1,0 +1,40 @@
+.dv_scroll{
+	width: 1200px;
+	height: 192px;
+}
+.dv_scroll table{
+	border-collapse: collapse;
+	width: 1200px;
+}
+.dv_scroll tr.tr-titre{
+	text-align:center;
+	color:white;
+	font-weight:bold;
+}
+.dv_scroll tr.tr-titre > td{
+	background-color: #009AFC;
+	border: 0
+}
+.dv_scroll td{
+	width: 100px;
+	font-size: 8pt;
+	text-align: center;
+	border: 1px solid #818181;
+}
+.dv_scroll td.td-titre {
+    width: 200px;
+    background-color: #010914;
+    border: 1px solid #FFF;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+.dv_scroll_table{
+	height: 151px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-bottom: 2px solid #010914;
+	border-left: 1px solid #009AFC;
+	border-right: 1px solid #009AFC;
+}

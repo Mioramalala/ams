@@ -1,0 +1,111 @@
+/* CSS LETTRE DE MISSION*/
+	#entete{
+	
+ position:relative;
+ top:200px;
+ right:110px;
+ width:300px;
+ }
+	
+	/*=============================================== */
+	
+	
+	h1{
+    font:Book Antiqua;
+    font-size:12px;
+	}
+	h2{
+    font:Book Antiqua;
+    font-size:12px;
+	}
+	h3{
+    font:Book Antiqua;
+    font-size:18px;
+	}
+	#corp{
+	
+ position:relative;
+ 
+ left:90px;
+ width:600px;
+
+	}
+	#p1{
+ position:relative;
+ left:40px;
+ width:560px;
+
+	}
+	#p_div_pied{
+ position:relative;
+ left:28px;
+ width:560px;
+
+	}
+	#corp_objet{
+ position:relative;
+ left:20px;
+ padding:5px;
+ width:700px;
+ border:1px solid;
+
+	}
+	#corp_objet2{
+ position:relative;
+ left:20px;
+ padding:5px;
+ width:700px;
+  background-color:#FF9900;
+ border:1px solid;
+
+	}
+	#corp_objet4{
+position:relative;
+ left:20px;
+ padding:5px;
+ width:700px;
+	}
+	#alph{
+ position:relative;
+ left:45px;
+ width:560px;
+
+	}
+	#p2{
+  position:relative;
+ left:60px;
+ width:450px;
+	}#p3{
+ position:relative;
+
+ right:70px;
+
+	}
+#conteneur {
+	
+ position:relative;
+ left:90px;
+
+ text-align: right;
+text-align: left;
+
+	}	/* border:solid 1px;*/
+
+li {
+    margin: 9em;
+}
+	.table ,.td
+	{
+	border-collapse:collapse;
+	border :1px solid black;
+	}
+	.table_p1{
+	border-collapse:collapse;
+	border :1px solid black;
+	}
+	.table_p4{
+	border-collapse:collapse;
+	border :1px solid black;
+	top:120px;
+	}
+	

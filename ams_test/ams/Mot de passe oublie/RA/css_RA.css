@@ -1,0 +1,163 @@
+#dv_principal_RA
+{
+	background-color:#000000;
+	width:1000px;
+	height:500px;
+}
+
+#labModif{
+	color:#0000FF;
+}
+#dv_solde{
+	float:left;
+	width:360px;
+	background-color:red;
+	border:2px solid;
+}
+#dv_etats_financiers
+{
+	
+	border-radius:2px;
+	width:700px;
+	height:120px;
+}
+
+#dv_revue{
+	/*background-color:red;*/
+	width:1000px;
+	height:500px;
+	overflow:auto;
+}
+#div_pcg{
+	overflow:auto;
+	height:370px;
+	width:1000px;
+	border:1px solid black;
+}
+
+#dv_balance
+{
+	background-color:#efefef;
+	border-radius:2px;
+	width:700px;
+	height:120px;
+}
+
+#dv_grand_livre
+{
+	background-color:#efefef;
+	border-radius:2px;
+	width:700px;
+	height:120px;
+}
+
+#dv_autre 
+{
+	border-radius:2px;
+	width:350px;
+	height:120px;
+	position:relative;
+}
+
+#dv_fl01
+{
+	width:1000px;
+	height:500px;
+	text-align:center;
+}
+
+.td_structure
+{
+	position:relative;
+	border:1px solid black;
+	width:350px;
+	height:50px;
+}
+
+.td_nom
+{
+	position:relative;
+	border:1px solid black;
+	width:500px;
+	height:200px;
+}
+.menu_RA
+{
+border:2px solid #ccc;
+background-color:#6495ED;
+width:350px;
+height:40px;
+border-radius:10px;
+padding-top:15px;
+}
+.tr_table
+{
+	background-color:#ddeeff;
+	position:relative;
+	border-radius:2px;
+	border:1px solid efefef;
+	width:300px;
+	height:50px;
+}
+
+#dv_table
+{
+	text-align:center;
+	width:350px;
+	height:120px;
+	border:1px solid black;
+}
+
+.cl_btAjouter
+{
+	/*background-color:red;*/
+	position:relative;
+	width:40px;
+	height:20px;
+	top:1px;
+	left:30px;
+}
+
+.cl_btAnnuler
+{
+	/*background-color:red;*/
+	position:relative;
+	width:40px;
+	height:20px;
+	top:-5px;
+	left:636px;
+}
+.bouton
+{
+	width:150px;
+	height:30px;
+	/*background-color:#7da0f8;*/
+	background-color:#ccc;
+	border:2px solid #bfbfbf;
+	font-family:Calibri;
+	font-size:12px;
+	border-radius:3px 3px 3px 3px;
+	font-weight:bold;
+}
+
+#bt_milahatra{
+	width:100px;
+	float:right;
+}
+
+.bouton:hover
+{
+	background-color:#fff;
+	cursor:pointer;
+}
+
+.td_Titre_Question
+{
+	font-family:Calibri;
+	color:#fff;
+	background-color:#03a5dc;
+	height:40px;
+	font-size:12px;
+	font-weight:bold;
+}
+

@@ -1,0 +1,492 @@
+<!-- <p>template principale /accueil.php -->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		<meta name="viewport" content="width=device-width">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="accueil.php_fichiers/cssEntreprise.css">
+		<link rel="stylesheet" href="accueil.php_fichiers/css2.css">
+		<link rel="stylesheet" href="accueil.php_fichiers/css.css">
+		<link rel="stylesheet" href="accueil.php_fichiers/waiting.css">
+		<link href="accueil.php_fichiers/bootsrap.htm" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="accueil.php_fichiers/jquery.css">
+		<style type="text/css">
+			.btn{
+				border: none; /* Remove borders */
+			    color: white; /* Add a text color */
+			    padding: 14px 28px; /* Add some padding */
+			    cursor: pointer; /* Add a pointer cursor on mouse-over */
+			}
+			.default {background-color: #eee; color: black;} /* Gray */
+			.default:hover {background: #ddd;}
+		</style>
+		
+		<script type="text/javascript" src="accueil.php_fichiers/jquery-1.js"></script>
+		<script src="accueil.php_fichiers/jquery-ui_002.js"></script>
+
+		
+		<script text="javascript" src="accueil.php_fichiers/jcanvas.js"></script>
+		<script text="javascript" src="accueil.php_fichiers/ajax.js"></script>
+		<script text="javascript" src="accueil.php_fichiers/pied.js"></script>
+		<script text="javascript" src="accueil.php_fichiers/fonctions-generiques.js"></script>
+		
+		<script type="text/javascript" src="accueil.php_fichiers/jquery.js"></script>
+
+		<script type="text/javascript" src="accueil.php_fichiers/angular.js"></script>
+		<!-- Tinay -->
+		<!-- <script text="javascript" src="cycleAchat/cycle_achat_js/js_event.js"></script> -->
+
+		<script>
+			function detecte_connexion()
+			{
+					var online = false;
+					if(!online) {
+						$('#entete').css('background-color', 'gray');
+						$('#pied').css('background-color', 'gray');
+					}					
+			}
+			
+				/*var confirmOnLeave = function(msg) {
+				 
+					window.onbeforeunload = function (e) {
+						e = e || window.event;
+						msg = msg || '';
+				 
+						// For IE and Firefox
+						if (e) {e.returnValue = msg;}
+				 
+						// For Chrome and Safari
+						return msg;
+					};
+				 
+				};
+				 
+				// message de confirmation générique du navigateur
+				//confirmOnLeave();
+				 
+				// message de confirmation personnalisé
+				confirmOnLeave('ts ay tsun e');*/
+		</script>
+
+		
+		
+		
+	</head>
+	<body onload="detecte_connexion()">
+
+		<!--<p>template principale /accueil.php</p>-->
+		
+		<div id="comteneur">
+			<div id="entete" style="background-color: rgb(128, 128, 128);">
+				<div id="logo_ams"></div>
+				<div id="place_interaction">
+					<div class="boutton_interaction" id="imprimer" onclick="PrintElem('.imprimable')"></div>
+					<div class="boutton_interaction" id="compte"></div>
+					<div class="boutton_interaction" id="aide"></div>
+				</div>
+				<div id="gest_pro">	
+					<center>
+						<img src="accueil.php_fichiers/TRIANGLE.png" id="tri"><p id="gest_p" class="Gest1">Mon profil</p><p id="utilisateur" class="Gest1">Utilisateurs</p><a href="#fermer" class="Gest" id="decon"> Déconnexion </a><input value="Administrateur" id="makaNom" style="display:none;" type=""><div id="fermer" style="display:none; z-index:9999;">
+									<center>
+										<p> Voulez vous vraiment fermer l'application Administrateur?</p>
+										<p>
+											<input value="Valider" id="okferme" type="button">
+											
+										</p>
+									</center>
+									
+								</div><table>
+							<tbody><tr>
+								
+								
+								
+								
+								
+								
+<!----------------------------------------deconnexion--------------------------------------------------------------->				
+								
+													
+<!-------------------------------------------------------------------------------------------------------------------->	
+							</tr>
+						</tbody></table>
+					</center>	
+				</div> <!--fin "gest-pro"-->
+				<div id="aide_apropos">	
+					<center>
+						<img src="accueil.php_fichiers/TRIANGLE.png" id="tri"><p id="aide_" class="Gest1">Aide</p><p id="apropos_" class="Gest1">A propos</p><table>
+							<tbody><tr>
+								
+								
+								
+							</tr>
+						</tbody></table>
+					</center>
+				</div>
+				<div id="fenetre_aide" style="display:none; z-index:9999;" data-options="handle:'#dragg'" align="center">
+				<div id="btn_fermeture"></div>
+					<center>
+						<p><input value="Fermer" id="fermeture" type="button"></p>
+					</center>	
+				</div>
+				<div id="fenetre_apropos" style="display:none; z-index:9999;" data-options="handle:'#dragg'" align="center">
+									<div id="btn_fermeture1"></div>
+									<div style="background-color:#FFFFFF;"><img src="accueil.php_fichiers/defaut_.png" width="100px" height="100px">
+										<p style="color:#666666">Version 2.3</p>
+										<p style="color:#666666">Date : 29-01-2015</p>
+									</div>
+									
+									<div id="apropos_pied">
+									<table style="margin-left:2px" cellspacing="10">
+										<tbody><tr>
+											<td>
+												<span style="color:#FFFFFF;font-size:10px">Application Web conçue et dévéloppée par </span>
+											</td>
+											<td>
+												<table>
+													<tbody><tr>
+														<td><p><img src="accueil.php_fichiers/TMS-576x352.png" width="108px" height="40px"></p></td>
+														
+													</tr>
+													<tr>
+														<td><span style="color:#FFFFFF;font-size:10px">www.tmsconsulting.pro</span></td>
+														
+													</tr>
+												</tbody></table>
+												
+												
+											</td>
+										</tr>
+									</tbody></table>
+									</div>
+									<!--<center>
+									<p><input type="button" value="Fermer" id="fermeture" /></p>
+									</center>-->
+									
+				</div>
+			</div>
+			<div id="contenueA">
+				<div class="" id="menu_laterale">
+					<!--<div id="contenue_menue"></div>-->
+					<!-- <div id="tete_menue" onClick="afficheMenue()"></div> -->
+				</div><!--fin menu laterale-->
+				<div id="Acc">
+
+
+    
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="accueil.php_fichiers/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="accueil.php_fichiers/bootstrap-select.css">
+        <link rel="stylesheet" type="text/css" href="accueil.php_fichiers/datepicker.css">
+        <link rel="stylesheet" type="text/css" href="accueil.php_fichiers/new-mission.css">
+        <script type="text/javascript" src="accueil.php_fichiers/jquery_002.js"></script>
+        <script type="text/javascript" src="accueil.php_fichiers/jquery-ui.js"></script>
+        <script type="text/javascript" src="accueil.php_fichiers/bootstrap.js"></script>
+        <script type="text/javascript" src="accueil.php_fichiers/bootstrap-select.js"></script>
+        <script type="text/javascript" src="accueil.php_fichiers/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="accueil.php_fichiers/bootstrap-datepicker_002.js" charset="UTF-8"></script>
+
+        <script type="text/javascript" src="accueil.php_fichiers/repartition_tache.js"></script>
+    
+
+    
+        <div class="row col-md-offset-2">
+            <div id="repartition-tache" class="row midina" style="height: 430px">
+                <input id="idMission" value="71" type="hidden">
+                <h3>Répartition des tâches </h3>
+                <div class="trait"></div>
+
+
+                <div style="text-align:left">
+
+                    <label>ETENDU DE LA MISSION</label>
+                    <br>
+
+                                        <form id="Frm_tacheETEND">
+                        <input value="RSCI" class="tacheETEND" name="tacheETEND[]" checked="checked" type="checkbox">  RSCI   <input value="RA" class="tacheETEND" name="tacheETEND[]" checked="checked" type="checkbox">  RA    <input value="RDC" class="tacheETEND" name="tacheETEND[]" checked="checked" type="checkbox">  RDC  <input value="RF" class="tacheETEND" name="tacheETEND[]" checked="checked" type="checkbox">  RAP FINAL
+                    </form>
+                    
+                </div>
+
+
+
+
+
+
+
+
+                    
+                <div class="col-xs-5 panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Tâches</h3>
+                    </div>
+                    <div id="liste-tache" class="panel-body ui-accordion ui-widget ui-helper-reset" role="tablist">
+                                            <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-header-active ui-state-active ui-corner-top ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-0" aria-controls="ui-accordion-liste-tache-panel-0" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span><a href="#">ACHATS</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" style="display: block; height: 30px;" id="ui-accordion-liste-tache-panel-0" aria-labelledby="ui-accordion-liste-tache-header-0" role="tabpanel" aria-hidden="false">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-1" aria-controls="ui-accordion-liste-tache-panel-1" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">IMMOBILISATIONS</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-1" aria-labelledby="ui-accordion-liste-tache-header-1" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-2" aria-controls="ui-accordion-liste-tache-panel-2" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">STOCKS</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-2" aria-labelledby="ui-accordion-liste-tache-header-2" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-3" aria-controls="ui-accordion-liste-tache-panel-3" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">PAIE</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-3" aria-labelledby="ui-accordion-liste-tache-header-3" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-4" aria-controls="ui-accordion-liste-tache-panel-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">TRESORERIES</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-4" aria-labelledby="ui-accordion-liste-tache-header-4" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-5" aria-controls="ui-accordion-liste-tache-panel-5" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">VENTES</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-5" aria-labelledby="ui-accordion-liste-tache-header-5" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-6" aria-controls="ui-accordion-liste-tache-panel-6" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">ENVIRONNEMENT DE CONTROLE</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-6" aria-labelledby="ui-accordion-liste-tache-header-6" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-7" aria-controls="ui-accordion-liste-tache-panel-7" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">SYSTEME D'INFORMATION</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-7" aria-labelledby="ui-accordion-liste-tache-header-7" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-8" aria-controls="ui-accordion-liste-tache-panel-8" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">FONDS PROPRES</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-8" aria-labelledby="ui-accordion-liste-tache-header-8" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-9" aria-controls="ui-accordion-liste-tache-panel-9" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">IMPOTS ET TAXES</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-9" aria-labelledby="ui-accordion-liste-tache-header-9" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-10" aria-controls="ui-accordion-liste-tache-panel-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">EMPRUNTS ET DETTES FINANCIERES</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-10" aria-labelledby="ui-accordion-liste-tache-header-10" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-11" aria-controls="ui-accordion-liste-tache-panel-11" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">DEBITEURS ET CREDITEURS DIVERS</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-11" aria-labelledby="ui-accordion-liste-tache-header-11" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                                <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-tache-header-12" aria-controls="ui-accordion-liste-tache-panel-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#">REPORTING</a></h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 30px;" id="ui-accordion-liste-tache-panel-12" aria-labelledby="ui-accordion-liste-tache-header-12" role="tabpanel" aria-hidden="true">
+                                <ul nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                    </ul>
+                            </div>
+                                        </div>
+                </div>
+
+                <div class="col-xs-5 panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Superviseur</h3>
+                    </div>
+                    <div class="panel-body">
+                                                <h4>
+                            <img src="accueil.php_fichiers/superviseur.png" alt="">
+                            <a href="#">Njaratiana RAMASITERA</a>
+                        </h4>
+                    </div>
+                    <div class="panel-footer">
+                        <select class="selectpicker" name="superviseur" id="selectSuperviseur" style="display: none;">
+                            <option selected="selected">Selectionnez un intervenant</option>
+                                                        <option value="4">Njaratiana RAMASITERA</option>
+                                    <option value="5">admin1</option>
+                                    <option value="6">admin2</option>
+                                    <option value="7">admin3</option>
+                                    <option value="12">Elie ANDRIANARIVONY</option>
+                                    <option value="13">Lionel RANDRIANARIMALALA</option>
+                                    <option value="14">Ando</option>
+                                    <option value="15">Mihary RAMIHARIMANANA</option>
+                                    <option value="16">Nandrianina RANDRIANARIVONY</option>
+                                    <option value="17">Tojo RAZANAPARANY</option>
+                                    <option value="18">Andrianomenjanahary Sitraka</option>
+                                    <option value="20">NORO Yvon</option>
+                                    <option value="21">David BECKAM</option>
+                                    <option value="22">Raphael</option>
+                                    <option value="23">Hery Rakotoarivony</option>
+                            </select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" data-id="selectSuperviseur" title="Selectionnez un intervenant"><span class="filter-option pull-left">Selectionnez un intervenant</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Selectionnez un intervenant&lt;/span&gt;"><span class="text">Selectionnez un intervenant</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Njaratiana RAMASITERA&lt;/span&gt;"><span class="text">Njaratiana RAMASITERA</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;admin1&lt;/span&gt;"><span class="text">admin1</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;admin2&lt;/span&gt;"><span class="text">admin2</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;admin3&lt;/span&gt;"><span class="text">admin3</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Elie ANDRIANARIVONY&lt;/span&gt;"><span class="text">Elie ANDRIANARIVONY</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Lionel RANDRIANARIMALALA&lt;/span&gt;"><span class="text">Lionel RANDRIANARIMALALA</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Ando&lt;/span&gt;"><span class="text">Ando</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Mihary RAMIHARIMANANA&lt;/span&gt;"><span class="text">Mihary RAMIHARIMANANA</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Nandrianina RANDRIANARIVONY&lt;/span&gt;"><span class="text">Nandrianina RANDRIANARIVONY</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Tojo RAZANAPARANY&lt;/span&gt;"><span class="text">Tojo RAZANAPARANY</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Andrianomenjanahary Sitraka&lt;/span&gt;"><span class="text">Andrianomenjanahary Sitraka</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;NORO Yvon&lt;/span&gt;"><span class="text">NORO Yvon</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;David BECKAM&lt;/span&gt;"><span class="text">David BECKAM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Raphael&lt;/span&gt;"><span class="text">Raphael</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Hery Rakotoarivony&lt;/span&gt;"><span class="text">Hery Rakotoarivony</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                        <button id="modifSuperviseur" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                    </div>
+                </div>
+
+                <div class="col-xs-5 panel panel-primary ui-resizable" id="accordion-resizer">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Auditeurs</h3>
+                    </div>
+                    <div id="liste-auditeur" class="panel-body ui-accordion ui-widget ui-helper-reset" style="height: 200px" role="tablist">
+                            	
+                            <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-liste-auditeur-header-0" aria-controls="ui-accordion-liste-auditeur-panel-0" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                                    <img src="accueil.php_fichiers/auditeur.png" alt=""><!-- <span class="badge">4</span> -->
+                                <a href="#">Elie ANDRIANARIVONY</a>
+                                <span idauditeur="12" class="glyphicon glyphicon-remove" style="float:right;"></span>
+                            </h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 0px; overflow: auto;" id="ui-accordion-liste-auditeur-panel-0" aria-labelledby="ui-accordion-liste-auditeur-header-0" role="tabpanel" aria-hidden="true">
+                                <ul idauditeur="12" nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                                    <li idtache="1" class="ui-draggable" idauditeur="12">Revue ContrÃ´les Achats</li>
+                                                                        <li idtache="2" class="ui-draggable" idauditeur="12">SynthÃ¨se risques Achats</li>
+                                                                        <li idtache="3" class="ui-draggable" idauditeur="12">Circularisation Fournisseurs</li>
+                                                                        <li idtache="5" class="ui-draggable" idauditeur="12">Revue Analytique Charges Fournisseurs</li>
+                                                                        <li idtache="6" class="ui-draggable" idauditeur="12">Revue comptes Charges Fournisseurs</li>
+                                                                        <li idtache="43" class="ui-draggable" idauditeur="12">Revue Environnement de contrÃ´le </li>
+                                                                        <li idtache="44" class="ui-draggable" idauditeur="12">SynthÃ¨se Risques Environnement de ContrÃ´le</li>
+                                                                        <li idtache="45" class="ui-draggable" idauditeur="12">Revue SystÃ¨me d'information</li>
+                                                                        <li idtache="46" class="ui-draggable" idauditeur="12">SynthÃ¨se risque systÃ¨me d'information</li>
+                                                                        <li idtache="56" class="ui-draggable" idauditeur="12">Circularisation Avocat</li>
+                                                                        <li idtache="57" class="ui-draggable" idauditeur="12">Circularisation DÃ©biteurs et crÃ©diteur divers</li>
+                                                                        <li idtache="59" class="ui-draggable" idauditeur="12">Revue Analytique DÃ©biteurs et CrÃ©diteurs divers</li>
+                                                                        <li idtache="60" class="ui-draggable" idauditeur="12">Revue comptes DÃ©biteurs et CrÃ©diteurs divers</li>
+                                                                    <!-- <li class="placeholder">Déplacer les tâches ici</li> -->
+                                </ul>
+                            </div>
+                            	
+                            <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-state-focus ui-accordion-header-active ui-state-active ui-corner-top" role="tab" id="ui-accordion-liste-auditeur-header-1" aria-controls="ui-accordion-liste-auditeur-panel-1" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>
+                                    <img src="accueil.php_fichiers/auditeur.png" alt=""><!-- <span class="badge">4</span> -->
+                                <a href="#">Lionel RANDRIANARIMALALA</a>
+                                <span idauditeur="13" class="glyphicon glyphicon-remove" style="float:right;"></span>
+                            </h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" style="display: block; height: 0px; overflow: auto;" id="ui-accordion-liste-auditeur-panel-1" aria-labelledby="ui-accordion-liste-auditeur-header-1" role="tabpanel" aria-hidden="false">
+                                <ul idauditeur="13" nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                                    <li idtache="26" class="ui-draggable" idauditeur="13">Revue ContrÃ´les TrÃ©sorerie</li>
+                                                                        <li idtache="27" class="ui-draggable" idauditeur="13">SynthÃ¨ses risques recettes</li>
+                                                                        <li idtache="28" class="ui-draggable" idauditeur="13">SynthÃ¨se risques dÃ©penses</li>
+                                                                        <li idtache="30" class="ui-draggable" idauditeur="13">Revue Analytique TrÃ©sorerie</li>
+                                                                        <li idtache="31" class="ui-draggable" idauditeur="13">Circularisation Banques</li>
+                                                                        <li idtache="32" class="ui-draggable" idauditeur="13">Revue comptes recettes</li>
+                                                                        <li idtache="37" class="ui-draggable" idauditeur="13">Revue ContrÃ´les Ventes</li>
+                                                                        <li idtache="38" class="ui-draggable" idauditeur="13"> SynthÃ¨ses risques Ventes</li>
+                                                                        <li idtache="40" class="ui-draggable" idauditeur="13">Circularisation Client</li>
+                                                                        <li idtache="41" class="ui-draggable" idauditeur="13">Revue Analytique Produits Clients</li>
+                                                                        <li idtache="42" class="ui-draggable" idauditeur="13">Revue compte Produit Clients</li>
+                                                                        <li idtache="62" class="ui-draggable" idauditeur="13">Finalisation mission</li>
+                                                                    <!-- <li class="placeholder">Déplacer les tâches ici</li> -->
+                                </ul>
+                            </div>
+                            	
+                            <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-auditeur-header-2" aria-controls="ui-accordion-liste-auditeur-panel-2" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                                    <img src="accueil.php_fichiers/auditeur.png" alt=""><!-- <span class="badge">4</span> -->
+                                <a href="#">Ando</a>
+                                <span idauditeur="14" class="glyphicon glyphicon-remove" style="float:right;"></span>
+                            </h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 0px; overflow: auto;" id="ui-accordion-liste-auditeur-panel-2" aria-labelledby="ui-accordion-liste-auditeur-header-2" role="tabpanel" aria-hidden="true">
+                                <ul idauditeur="14" nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                                    <li idtache="7" class="ui-draggable" idauditeur="14">Revue ContrÃ´les Immobilisations</li>
+                                                                        <li idtache="8" class="ui-draggable" idauditeur="14">SynthÃ¨se risques Immobilisations</li>
+                                                                        <li idtache="11" class="ui-draggable" idauditeur="14">Revue Analytique Immobilisations incorporelles et corporelles</li>
+                                                                        <li idtache="12" class="ui-draggable" idauditeur="14">Revue Analytique Immobilisations financiÃ¨res</li>
+                                                                        <li idtache="13" class="ui-draggable" idauditeur="14">Revue comptes Immobilisations incorporelles et corporelles</li>
+                                                                        <li idtache="15" class="ui-draggable" idauditeur="14">Revue comptes Immobilisations financiÃ¨res</li>
+                                                                        <li idtache="47" class="ui-draggable" idauditeur="14">Revue compte fonds propre</li>
+                                                                        <li idtache="49" class="ui-draggable" idauditeur="14">Revue Analytique Fonds propres</li>
+                                                                        <li idtache="50" class="ui-draggable" idauditeur="14">Revue Comptes ImpÃ´ts et taxes</li>
+                                                                        <li idtache="52" class="ui-draggable" idauditeur="14">Revue Analytique impÃ´ts et taxes</li>
+                                                                    <!-- <li class="placeholder">Déplacer les tâches ici</li> -->
+                                </ul>
+                            </div>
+                            	
+                            <h4 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-liste-auditeur-header-3" aria-controls="ui-accordion-liste-auditeur-panel-3" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                                    <img src="accueil.php_fichiers/auditeur.png" alt=""><!-- <span class="badge">4</span> -->
+                                <a href="#">Mihary RAMIHARIMANANA</a>
+                                <span idauditeur="15" class="glyphicon glyphicon-remove" style="float:right;"></span>
+                            </h4>
+                            <div class="liste-accordion ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 0px; overflow: auto;" id="ui-accordion-liste-auditeur-panel-3" aria-labelledby="ui-accordion-liste-auditeur-header-3" role="tabpanel" aria-hidden="true">
+                                <ul idauditeur="15" nav="" nav-tabs="" nav-stacked="" class="ui-droppable">
+                                                                    <li idtache="16" class="ui-draggable" idauditeur="15">Revue ContrÃ´les Stocks</li>
+                                                                        <li idtache="17" class="ui-draggable" idauditeur="15">SynthÃ¨se risques Stocks</li>
+                                                                        <li idtache="19" class="ui-draggable" idauditeur="15">Revue Analytique Stocks</li>
+                                                                        <li idtache="20" class="ui-draggable" idauditeur="15">Revue comptes Stocks</li>
+                                                                        <li idtache="21" class="ui-draggable" idauditeur="15">Revue CotrÃ´les Paie</li>
+                                                                        <li idtache="22" class="ui-draggable" idauditeur="15">SynthÃ¨se Risques Paie</li>
+                                                                        <li idtache="24" class="ui-draggable" idauditeur="15">Revue Analytique Paie et Personnel</li>
+                                                                        <li idtache="25" class="ui-draggable" idauditeur="15">Revue comptes Paie et Personnel</li>
+                                                                        <li idtache="53" class="ui-draggable" idauditeur="15">Revue comptes Emprunts et DettesfinanciÃ¨res</li>
+                                                                        <li idtache="55" class="ui-draggable" idauditeur="15">Revue analytique Emprunts et dettes financiÃ¨res</li>
+                                                                    <!-- <li class="placeholder">Déplacer les tâches ici</li> -->
+                                </ul>
+                            </div>
+                                                </div>
+                    <div class="panel-footer">
+                        <select class="selectpicker" name="auditeur" style="display: none;">
+                            <option selected="selected">Selectionnez un intervenant</option>
+                                <option value="4">Njaratiana RAMASITERA</option>
+                                                            <option value="5">admin1</option>
+                                                            <option value="6">admin2</option>
+                                                            <option value="7">admin3</option>
+                                                            <option value="16">Nandrianina RANDRIANARIVONY</option>
+                                                            <option value="17">Tojo RAZANAPARANY</option>
+                                                            <option value="18">Andrianomenjanahary Sitraka</option>
+                                                            <option value="20">NORO Yvon</option>
+                                                            <option value="21">David BECKAM</option>
+                                                            <option value="22">Raphael</option>
+                                                            <option value="23">Hery Rakotoarivony</option>
+                                                    </select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="Selectionnez un intervenant"><span class="filter-option pull-left">Selectionnez un intervenant</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Selectionnez un intervenant&lt;/span&gt;"><span class="text">Selectionnez un intervenant</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Njaratiana RAMASITERA&lt;/span&gt;"><span class="text">Njaratiana RAMASITERA</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;admin1&lt;/span&gt;"><span class="text">admin1</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;admin2&lt;/span&gt;"><span class="text">admin2</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;admin3&lt;/span&gt;"><span class="text">admin3</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Nandrianina RANDRIANARIVONY&lt;/span&gt;"><span class="text">Nandrianina RANDRIANARIVONY</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Tojo RAZANAPARANY&lt;/span&gt;"><span class="text">Tojo RAZANAPARANY</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Andrianomenjanahary Sitraka&lt;/span&gt;"><span class="text">Andrianomenjanahary Sitraka</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;NORO Yvon&lt;/span&gt;"><span class="text">NORO Yvon</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;David BECKAM&lt;/span&gt;"><span class="text">David BECKAM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Raphael&lt;/span&gt;"><span class="text">Raphael</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-normalized-text="&lt;span class=&quot;text&quot;&gt;Hery Rakotoarivony&lt;/span&gt;"><span class="text">Hery Rakotoarivony</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                        <button id="addAuditeur" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                    </div>
+
+                <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div>
+            </div>
+            <div class="trait" style="width:80%;"></div>
+            <div class="row midina">
+                <button class="btn btn-primary" id="btnValider">Enregistrer la répartition des tâches</button>
+                <button class="btn btn-default" id="btnAnnuler">Annuler</button>
+            </div>
+        </div>
+    
+
+</div><!--fin data_ams-->
+			</div><!--fin contenue-->
+		
+			<div id="pied" style="background-color: rgb(128, 128, 128);">
+				<div id="msg">
+123456789
+</div>
+
+
+			
+<div class="editor_canvas" id="statut_societe">
+	<div id="logo_societe"><!--img src="../<?php// if(@$logo!=""){echo $logo;} else{ echo "icone/logo_ams_blanc.png";}?>" height="100%" width="100%" /--></div>
+	<div id="nom_societe"><span><strong>INTEREX</strong></span></div>
+	<!--<canvas  class="canvas" id="canvasElem_editor" width="30" height="100%"> ici canvas</canvas>-->
+</div>
+<div id="chemin_navig">
+		<div id="nom_mission">
+			<div class="bord_ fin"></div>
+			<span><strong>Final 2010<strong></strong></strong></span>
+			<div class="bord_ debut"></div>
+		</div>
+	<div id="nom_process">
+		<div class="bord_ fin"></div>
+		<span></span>
+	</div>
+	<div id="nom_cycle"><span></span></div>
+</div>
+
+<div id="statut_utilisateur">
+	<div id="btn_power"><a href="#fermer" class="Gest" id="power"> <img src="accueil.php_fichiers/btn_power.png" id="power" class="iconebr" title="Déconnecter Administrateur "> </a></div>
+	
+	<div id="nom_utilisateur"><span>Administrateur</span></div>
+</div>
+<div id="accesoires">
+
+	<div id="acc_msg"></div>
+	<div id="acc_word" onclick="overWord()"></div>
+	<div id="acc_exel"></div>
+
+</div>
+
+			</div>
+		</div><!--fin contenu-->
+	
+	
+
+</body></html>

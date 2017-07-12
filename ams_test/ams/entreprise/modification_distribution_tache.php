@@ -1,0 +1,790 @@
+<?php include '../connexion.php';
+$liste=array();
+$listId=array();
+$liste="d";
+$listId="d";
+$nbr=1;
+?>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../css/cssEntreprise.css"/>
+		<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+		 <link href="css/multi-select.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="../facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+		<script src="../facebox/facebox.js" type="text/javascript"></script> 
+		<script src="js/jquery.multi-select.js" type="text/javascript"></script>
+		<script type="text/javascript" src="src/date/jquery.datepick.min.js"></script>
+		<script type="text/javascript" src="src/date/jquery.datepick-fr.js"></script>
+		<link rel="stylesheet" href="src/date/jquery.datepick.css"></script>
+		
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script>
+			$(function(){
+			
+			$("#openSup").click(function(){
+					$(this).hide();
+					$("#CloseSup").show();
+					$("#superviseur").show();
+				
+				});		
+				$("#CloseSup").click(function(){
+					$(this).hide();
+					$("#openSup").show();
+					$("#superviseur").hide();
+				
+				});	
+				
+				
+			$("#openAud").click(function(){
+				$(this).hide();
+				$("#CloseAud").show();
+				$("#auditeur").show();
+				});
+				
+			$("#CloseAud").click(function(){
+				$(this).hide();
+				$("#openAud").show();
+				$("#auditeur").hide();
+				});
+			$("#openAchat").click(function(){
+				$(this).hide();
+				$("#CloseAchat").show();
+				$("#list_achat").show();
+			
+			});	
+			
+			$("#CloseAchat").click(function(){
+				$(this).hide();
+				$("#openAchat").show();
+				$("#list_achat").hide();
+			
+			});	
+			
+			$("#openImmo").click(function(){
+				$(this).hide();
+				$("#CloseImmo").show();
+				$("#list_Immo").show();
+			
+			});
+			$("#CloseImmo").click(function(){
+				$(this).hide();
+				$("#openImmo").show();
+				$("#list_Immo").hide();
+			
+			});	
+			$("#openStock").click(function(){
+				$(this).hide();
+				$("#list_Stock").show();
+				$("#CloseStock").show();
+				
+			});
+			
+			$("#CloseStock").click(function(){
+				$(this).hide();
+				$("#openStock").show();
+				$("#list_Stock").hide();
+				
+			});
+			
+			$("#openPaie").click(function(){
+				$(this).hide();
+				$("#list_Paie").show();
+				$("#ClosePaie").show();
+				
+			});
+			
+			$("#ClosePaie").click(function(){
+				$(this).hide();
+				$("#openPaie").show();
+				$("#list_Paie").hide();
+				
+			});
+			$("#openTreso").click(function(){
+				$(this).hide();
+				$("#list_Treso").show();
+				$("#CloseTreso").show();
+				
+			});
+			
+			$("#CloseTreso").click(function(){
+				$(this).hide();
+				$("#openTreso").show();
+				$("#list_Treso").hide();
+				
+			});
+			$("#openVentes").click(function(){
+				$(this).hide();
+				$("#list_Ventes").show();
+				$("#CloseVentes").show();
+				
+			});
+			
+			$("#CloseVentes").click(function(){
+				$(this).hide();
+				$("#openVentes").show();
+				$("#list_Ventes").hide();
+				
+			});
+			$("#openEnv").click(function(){
+				$(this).hide();
+				$("#list_Env").show();
+				$("#CloseEnv").show();
+				
+			});
+			
+			$("#CloseEnv").click(function(){
+				$(this).hide();
+				$("#openEnv").show();
+				$("#list_Env").hide();
+				
+			});
+			$("#openSystInfo").click(function(){
+				$(this).hide();
+				$("#list_SystInfo").show();
+				$("#CloseSystInfo").show();
+				
+			});
+			
+			$("#CloseSystInfo").click(function(){
+				$(this).hide();
+				$("#openSystInfo").show();
+				$("#list_SystInfo").hide();
+				
+			});
+			$("#openFondProp").click(function(){
+				$(this).hide();
+				$("#list_FondProp").show();
+				$("#CloseFondProp").show();
+				
+			});
+			
+			$("#CloseFondProp").click(function(){
+				$(this).hide();
+				$("#openFondProp").show();
+				$("#list_FondProp").hide();
+				
+			});
+			$("#openImpot").click(function(){
+				$(this).hide();
+				$("#list_Impot").show();
+				$("#CloseImpot").show();
+				
+			});
+			
+			$("#CloseImpot").click(function(){
+				$(this).hide();
+				$("#openImpot").show();
+				$("#list_Impot").hide();
+				
+			});
+			
+			$("#openEmpr").click(function(){
+				$(this).hide();
+				$("#list_Empr").show();
+				$("#CloseEmpr").show();
+				
+			});
+			
+			$("#CloseEmpr").click(function(){
+				$(this).hide();
+				$("#openEmpr").show();
+				$("#list_Empr").hide();
+				
+			});
+			$("#openDebCred").click(function(){
+				$(this).hide();
+				$("#list_DebCred").show();
+				$("#CloseDebCred").show();
+				
+			});
+			
+			$("#CloseDebCred").click(function(){
+				$(this).hide();
+				$("#openDebCred").show();
+				$("#list_DebCred").hide();
+				
+			});
+			$("#openReport").click(function(){
+				$(this).hide();
+				$("#list_Report").show();
+				$("#CloseReport").show();
+				
+			});
+			
+			$("#CloseReport").click(function(){
+				$(this).hide();
+				$("#openReport").show();
+				$("#list_Report").hide();
+				
+			});
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+			$("#ret").click(function(){
+		
+				$("#ListOP").load("entreprise/modification_choix_equipe.php");
+			});
+			
+					
+			
+		});
+			
+		</script>
+			</head>
+	<body>
+	
+	<center>
+		
+		<div id="ListOP">
+		<div id="dist_tach">
+			<table id="tbl_ret">
+				<tr>
+					<td>
+						<img src="../icone/boutton.png" id="flech"/>
+					</td>
+					<td>
+						<p id="ret">Reformer </br>l'équipe</p>
+					</td>
+				</tr>
+			</table>
+		
+			<table>
+				<th colspan="2" style="padding-bottom:10px; font-weight:bold; font-size:18px;">Modification répartition des tâches 
+				<input type="text" value="<?php echo $nbr-1;?>" id="nbr" style="display:none"/></th>
+				<tr>
+					
+					<td>
+						<!---------------------------table hizara 2 pour superviz et audit-------------------------------->
+					
+						<div id="list_Operant" class="cadretache">
+						<center><div class="titreSp1"> Les collaborateurs </div></center>	
+							<!--- boucle nombre operant -->
+							<!--div title="Liste des superviseurs" class="titreSp" id="openSup">Superviseur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;</div>
+							<div title="Fermer liste des superviseurs" class="titreSp2" id="CloseSup" style="display:none;">superviseur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;</div>
+	
+							<div id="superviseur" style="display:none;">
+							
+							  <?php 
+							 
+							  // for($i=1;$i<$nbr;$i++)
+							  // {
+										// $sqltoperan="SELECT UTIL_NOM FROM tab_utilisateur WHERE UTIL_STATUT=1  AND UTIL_ID=".$listId[$i];							
+										// $repTO=$bdd->query($sqltoperan);	
+											// while($donneTo=$repTO->fetch())
+											// {
+												// $NomUtil=$donneTo["UTIL_NOM"];
+												  ?>
+												<div class="operant_selecte">
+													<table>
+														<tr>
+															<td>
+																<div id="<?php// echo $listId[$i]; ?>" class="operanPers" onClick="openMe(<?php// echo $listId[$i]; ?>)">
+																	<img src="../icone/superviseur.png" class="imgOperan"/>
+																	<div class="nomOP"><?php// echo $NomUtil;?></div> <span id="labNbr<?php// echo $listId[$i]; ?>"class="labNbr" > <span  class="nbr_tach <?php// echo $listId[$i];?>"> </span>  tache attribué</span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2">
+															<input type="text" id="pers<?php// echo $i;?>" value="<?php// echo $listId[$i];?>" style="display:none;"/>
+															<div id="listTac<?php// echo $listId[$i];?>"  class="operantCl"> <label id="miakatra" onClick="closeMe(<?php// echo $listId[$i]; ?>);">X</label> </div></td>
+														</tr>
+													</table>
+												 </div>
+											<?php
+											// }
+								// }
+								?>
+							</div-->
+								<div title="Liste des auditeurs" class="titreSp" id="openAud">Auditeurs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+							<div title="Fermer liste des auditeurs" class="titreSp2" id="CloseAud" style="display:none;">Auditeurs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+								<div id="auditeur" style="display:none">
+							  <?php 
+							  for($i=1;$i<$nbr;$i++)
+							  {
+										$sqltoperan="SELECT UTIL_NOM FROM tab_utilisateur WHERE UTIL_STATUT=0  AND UTIL_ID=".$listId[$i];							
+										$repTO=$bdd->query($sqltoperan);	
+											while($donneTo=$repTO->fetch())
+											{
+												$NomUtil=$donneTo["UTIL_NOM"];
+												
+										
+											  ?>
+												<div class="operant_selecte">
+													<table>
+														<tr>
+															<td>
+																<div id="<?php echo $listId[$i]; ?>" class="operanPers" onClick="openMe(<?php echo $listId[$i]; ?>)">
+																	<img src="../icone/auditeur.png" class="imgOperan"/>
+																	<div class="nomOP"><?php echo $NomUtil;?></div> <span id="labNbr<?php echo $listId[$i]; ?>"class="labNbr" > <span  class="nbr_tach <?php echo $listId[$i];?>"> </span>  tâche(s) attribuée(s)</span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<input type="text" id="pers<?php echo $i;?>" value="<?php echo $listId[$i];?>" style="display:none;"/>
+															<td colspan="2"><div id="listTac<?php echo $listId[$i];?>" class="operantCl"> <label id="miakatra" onClick="closeMe(<?php echo $listId[$i]; ?>);">X</label> </div></td>
+
+														</tr>
+													</table>
+												 </div>
+											<?php
+											}
+								}
+								?>
+								</div>
+						</div>	
+
+				<!-----------------------------------------------fin table------------------------------------------------>
+				
+					</td>
+					<td>
+				
+						<div id="list_tache_cycle" class="cadretache">
+						
+						<!-----------------------------------------tache------------------------------------------------>
+							<center><div id="clik_tache" class="titreSp1" onClick="retour_tach()"> Tâches</div></center>
+							<div class="titreSp" id="openAchat">ACHATS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<div class="titreSp2" id="CloseAchat"style="display:none">ACHATS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<ul id="list_achat" class="list_Tache">
+								
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='ACHATS' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$rep=$bdd->query($sqlTache);
+										$compt1=0;
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+										$compt1++;
+										} 
+									?>
+							</ul>	
+							
+							<!---------------------------------immobilisation----------------------------------------->
+							<div class="titreSp" id="openImmo">IMMOBILISATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<div class="titreSp2" id="CloseImmo"style="display:none">IMMOBILISATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<ul id="list_Immo" class="list_Tache">
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='IMMOBILISATIONS' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt2=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											
+											<input type="text" value="<?php echo $id_cycle;?>" id="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt2++;
+										}
+									?>
+							</ul>
+							
+							<!---------------------------------stock------------------------------------->
+							<div class="titreSp" id="openStock">STOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<div class="titreSp2" id="CloseStock"style="display:none">STOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<ul id="list_Stock" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='STOCKS' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt3=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt3++;
+										}
+									?>
+							</ul>
+							
+							<!---------------------------------PAIE------------------------------------->
+							<div class="titreSp" id="openPaie">PAIE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<div class="titreSp2" id="ClosePaie"style="display:none">PAIE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<ul id="list_Paie" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='PAIE' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt4=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt4++;
+										}
+									?>
+							</ul>
+							
+							
+							
+							<!---------------------------------TRESORERIES------------------------------------->
+							<div class="titreSp" id="openTreso">TRESORERIES&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<div class="titreSp2" id="CloseTreso"style="display:none">TRESORERIES&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<ul id="list_Treso" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='TRESORERIES' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt5=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+										
+										
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt5++;
+										}
+									?>
+							</ul>
+							
+							
+							<!---------------------------------VENTES------------------------------------->
+							<div class="titreSp" id="openVentes">VENTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<div class="titreSp2" id="CloseVentes"style="display:none">VENTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<ul id="list_Ventes" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='VENTES' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt6=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt6++;
+										}
+									?>
+							</ul>
+							
+							
+							<!---------------------------------ENVIRONNEMENT DE CONTROLE------------------------------------->
+							<div class="titreSp" id="openEnv">ENVIRONNEMENT DE CONTROLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+							
+							
+							</div>
+							<div class="titreSp2" id="CloseEnv"style="display:none">ENVIRONNEMENT DE CONTROLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							
+							</div>
+							<ul id="list_Env" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='ENVIRONNEMENT DE CONTROLE' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt7=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt7++;
+										}
+									?>
+							</ul>
+							
+						<!--------------------------------- 	SYSTEME D'INFORMATION------------------------------------->
+							<div class="titreSp" id="openSystInfo">SYSTEME D'INFORMATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+							</div>
+							<div class="titreSp2" id="CloseSystInfo"style="display:none">SYSTEME D'INFORMATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						
+							</div>
+							<ul id="list_SystInfo" class="list_Tache">
+						
+										<?php 
+										$sqlTache='SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache="'."SYSTEME D'INFORMATION".'" ORDER BY id_tache asc ';
+										//echo $sqlTache;
+										$compt8=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt8++;
+										}
+									?>
+							</ul>	
+							
+							<!------------------------------------------ FONDS PROPRES------------------------------------->
+							<div class="titreSp" id="openFondProp">FONDS PROPRES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+							</div>
+							<div class="titreSp2" id="CloseFondProp"style="display:none">FONDS PROPRES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						
+							</div>
+							<ul id="list_FondProp" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='FONDS PROPRES' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt9=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt9++;
+										}
+									?>
+							</ul>	
+							
+							<!------------------------------------------ IMPOTS ET TAXES------------------------------------->
+							<div class="titreSp" id="openImpot">IMPOTS ET TAXES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+							</div>
+							<div class="titreSp2" id="CloseImpot"style="display:none">IMPOTS ET TAXES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						
+							</div>
+							<ul id="list_Impot" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='IMPOTS ET TAXES' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt10=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt10++;
+										}
+									?>
+							</ul>	
+							
+							<!------------------------------------------ EMPRUNTS ET DETTES FINANCIERES------------------------------------->
+							<div class="titreSp" id="openEmpr">EMPRUNTS ET DETTES FINANCIERES
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							</div>
+							<div class="titreSp2" id="CloseEmpr"style="display:none">EMPRUNTS ET DETTES FINANCIERES
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							</div>
+							<ul id="list_Empr" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='EMPRUNTS ET DETTES FINANCIERES' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt11=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt11++;
+										}
+									?>
+							</ul>
+							
+							
+							<!------------------------------------------ DEBITEURS ET CREDITEURS DIVERS------------------------------------->
+							<div class="titreSp" id="openDebCred">DEBITEURS ET CREDITEURS DIVERS
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							</div>
+							<div class="titreSp2" id="CloseDebCred"style="display:none">DEBITEURS ET CREDITEURS DIVERS
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							</div>
+							<ul id="list_DebCred" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='DEBITEURS ET CREDITEURS DIVERS' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt12=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt12++;
+										}
+									?>
+							</ul>	
+							
+							<!------------------------------------------ REPORTING------------------------------------->
+							<div class="titreSp" id="openReport">REPORTING
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							</div>
+							<div class="titreSp2" id="CloseReport"style="display:none">REPORTING
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<ul id="list_Report" class="list_Tache">
+						
+										<?php 
+										$sqlTache="SELECT  DISTINCT  id_tache,formulation_tache FROM  tab_tache WHERE fonction_tache='REPORTING' ORDER BY id_tache asc ";
+										// echo $sqlTache;
+										$compt13=0;
+										$rep=$bdd->query($sqlTache);
+										while($donnCycl=$rep->fetch())
+										{
+											$leCycle=$donnCycl["formulation_tache"];
+											$id_cycle=$donnCycl["id_tache"];
+											?>
+											<input type="text" id="<?php echo $id_cycle;?>" value="<?php echo $id_cycle;?>" style="display:none" name="cl1[]"/>
+											<li id="<?php echo $id_cycle;?>"><input type="checkbox" id="<?php echo $id_cycle;?>" class="classTach" value="<?php echo $leCycle; ?>"><label><?php echo $leCycle; ?></label></li>
+											<?php 
+											$compt13++;
+										}
+									?>
+							</ul>	
+
+						</div>
+		
+					</td>
+				</tr>			
+			</table>
+			
+			
+				<p id="creer" >Modifier</p>
+				<input type="button" value="Annuler" id="annulCM" class="txtGen"/>
+				
+			
+		</div>
+	
+	
+		</center>
+	
+	</body>
+</html>
+	
+	

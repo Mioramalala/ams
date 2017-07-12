@@ -1,0 +1,404 @@
+.icone1
+{
+height:20px;
+width:20px;
+float:right;
+margin-right:10px;
+margin-top:5px;
+
+}
+.icone1:hover
+{
+cursor:pointer;
+}
+.iconeU
+{
+height:20px;
+width:20px;
+float:right;
+margin-right:-5px;
+margin-top:-20px;
+
+}
+
+#ConfMdp{
+margin-left:10px;
+}
+#NewMdp{
+margin-left:10px;
+}
+.iconeU:hover
+{
+cursor:pointer;
+}
+#txt1{
+border-radius:10px 0 0 0;
+/*background-color:#0074bf;*/
+color:#fff;
+padding-bottom:20px;
+}
+#txt2{
+border-radius:0 0 0 10px;
+background-color:#0074bf;
+color:#fff;
+
+}#txt{
+border-radius:0 0 0 0;
+background-color:#0074bf;
+color:#fff;
+padding-bottom:20px;
+}
+#caz{
+border-radius:0 0 0 0;
+background-color:#0074bf;
+color:#fff;
+
+}
+#caz1{
+margin-left:10px;
+background-color:#0074bf;
+color:#fff;
+padding-bottom:20px;
+}
+#caz2{
+margin-left:10px;
+border-radius:0 0 10px 0;
+background-color:#0074bf;
+color:#fff;
+}
+.clProf{
+	border-radius:8px;
+	width:220px;
+	height:40px;
+	border:1px solid #ccc;
+	color:#0074bf;
+	font-weight:bold;
+	
+}
+
+#Monprof tr{
+border-collapse:collapse;
+}
+#Monprof td{
+border-collapse:collapse;
+/*border:1px solid;*/
+}
+#Monprof {
+border-collapse:collapse;
+margin-left: 50px;
+}
+
+.clProf1bis{
+/*background-color:#0074bf;*/
+border-radius:10px 10px 0 0;
+padding-top:10px;
+padding-bottom:20px;
+padding-left:10px;
+padding-right:10px;
+}
+.clProf1{
+/*background-color:#0074bf;*/
+color:#fff;
+border-radius:10px 10px 0 0;
+border:0px solid #0074bf;
+padding-top:10px;
+padding-bottom:20px;
+padding-left:10px;
+padding-right:10px;
+}
+
+.clProf2{
+background-color:#0074bf;
+color:#fff;
+border-radius:10px 0 10px 10px;
+/*border:1px solid ;*/
+padding-top:10px;
+padding-bottom:10px;
+padding-left:10px;
+padding-right:10px;
+}
+#profilTitle{
+font-size:20px;
+color:#0074bf;
+margin-left:60px;
+}
+#cadreprofil1
+{
+margin-left:59px;
+border:1px solid #efefef;
+padding:0 0 0 0;
+width:100%;
+border-radius:1px;
+height:100%;
+background-color:#fff;
+
+}
+#listUtil{
+margin-left:-20px;
+height:190px;
+width:650px;
+
+}
+#pllist{
+margin-left:-7px;
+margin-top:-15px;
+width:875px;
+height:300px;
+overflow:auto;
+box-shadow:-4px -3px 8px #ccc
+
+}
+#listUser{
+border-collapse:collapse;
+
+}
+#listUser tr:hover{
+background-color:#87CEEB;
+cursor:pointer;
+}
+
+#listUser td
+{
+border-bottom:2px solid #ccc;
+}
+
+#cadreUtilisateur
+{
+margin-top:15px;
+margin-left: 100px;
+padding-right: 50px;
+border: 1px solid #efefef;
+padding: 15px 0 0 100px;
+width: 70%;
+border-radius: 20px;
+height:700px;
+background-color:white;
+overflow:auto;
+}
+#tblUtilisateur 
+{
+top:520px;
+position:absolute;
+padding:10px 10px 10px 10px;
+}
+
+#nouvelUser
+{
+margin-top:220px;
+margin-left: -50px;
+
+}
+
+/*user*/
+#titreUser{
+color:#1E7FCB;
+margin-left: 30px;
+font-size: 140%;
+}
+/*user*/
+#titreUser2{
+color:#1E7FCB;
+margin-left: 60px;
+font-size: 140%;
+top:500px;
+}
+/*user*/
+#titreUser3{
+color:#1E7FCB;
+margin-left: 60px;
+font-size: 140%;
+top:500px;
+display:none;
+}
+
+#LoginUtil
+{
+width:230px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+}
+/*user*/
+#mdpUtil
+{
+width:230px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+}
+/*user*/
+#nomUtil
+{
+width:230px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+}
+/*user*/
+#confmdp
+{
+width:220px;
+height:40px;
+border-radius:10px 10px 10px 10px;
+}
+/*user*/
+#statUtil
+{
+width:150px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+}
+#x_img{
+width: 25px;
+height: 28px;
+margin-top: 25px;
+margin-bottom: 6px;
+margin-right: 15px;
+}
+#x_img:hover{
+cursor:pointer;
+}
+#Actif
+{
+width:150px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+}
+/*user*/
+.nouvUser
+{
+color:#9E9E9E;
+font-size: 100%;
+}
+/*user*/
+#engNewUtil
+{
+width:120px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+color:white;
+background-color:#9E9E9E;
+font-size: 100%;
+}
+/*user*/
+#engNewUtil:hover
+{
+background-color:#007FFF;
+cursor:pointer;
+}
+/*user*/
+#AnnulUtil
+{
+width:120px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+color:white;
+background-color:#9E9E9E;
+font-size: 100%;
+}
+/*user*/
+#AnnulUtil:hover
+{
+background-color:#007FFF;
+cursor:pointer;
+}
+
+/*user*/
+#btnSavMod
+{
+width:120px;
+height:50px;
+border-radius:10px 10px 10px 10px;
+color:white;
+background-color:#9E9E9E;
+font-size: 100%;
+display:none;
+}
+/*user*/
+#btnSavMod:hover
+{
+background-color:#007FFF;
+cursor:pointer;
+}
+/*user*/
+/*#fermer{
+margin-top:-480px;
+margin-right:20px;
+height:30px;
+width:30px;
+float:right;
+margin-right:16px;
+}*/
+
+#cadreprofil2
+{
+border:1px solid;
+width:200px;
+background-color:#778899;
+margin-left:-100px;
+}
+#cadreprofil3
+{
+border:1px solid;
+width:250px;
+background-color:#778899;
+
+}
+#ChangePSW
+{
+color:#ccc;
+
+
+}
+
+#cazMDP
+{
+width:30%;
+background-color:#FFFFFF;
+display:block;
+position:absolute;
+height:auto;
+margin-left:62%;
+margin-top:-90px;
+
+
+}
+
+#ChangePSW:hover
+{
+cursor:pointer;
+}
+
+#img_close{
+/*background-color:red;*/
+float:right;
+margin-top:10px;
+}
+
+.opProfil{
+color:#fff;
+border:2px solid #efefef;
+border-radius:10px;
+background-color:#ccc;
+width:100px;
+height:30px;
+padding:10px 0 0 20px;
+display:inline-block;
+}
+.opProfil:hover{
+background-color:#0074bf;
+cursor:pointer;
+}
+#anuMdp2{
+color:#fff;
+border:2px solid #efefef;
+border-radius:10px;
+background-color:#ccc;
+width:100px;
+height:30px;
+padding:10px 0 0 20px;
+display:inline-block;
+margin-top:150px;
+margin-left:330px;
+}
+#anuMdp2:hover{
+background-color:#0074bf;
+cursor:pointer;
+}

@@ -1,0 +1,22 @@
+.body-google-viewer{
+	position: relative;
+
+}
+.body-google-viewer > a.bouton {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #BCBCBC;
+	border: 1px solid #BABABA;
+	border-radius: 4px;
+	color: white;
+	font-family: "arial";
+}
+.body-google-viewer > a.bouton:hover {
+	color: #68A5F7;
+	background-color: #c4c4c4;
+	border: 1px solid #c0c0c0;
+}

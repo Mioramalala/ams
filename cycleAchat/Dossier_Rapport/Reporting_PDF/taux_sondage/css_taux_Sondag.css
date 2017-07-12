@@ -1,0 +1,74 @@
+
+	
+	.salarie{
+	    position: fixed;
+	    top: 20px;
+	    left: 15px;
+	}
+	
+	#infoSociete{
+	    padding-left: 40px;
+	}
+	.societe{
+	    position: absolute;
+	        top:36px;
+	        right: 15px;
+			 padding:5px 5px;
+			height :90px;
+			width :450px;
+			   border:1px solid black;
+	}
+	.corps{
+	    position: absolute;
+	        top:60px;
+	        right: 15px;
+			height :150px;
+			margin-left:25px;
+			width :400px;
+	}
+	
+	
+	
+	h4{
+		padding-left: 50px;
+	}
+	.titre{
+		position: absolute;
+		top: 10px;
+		left: 280px;
+		font-size: 17px;	
+	}
+	
+	.tableau{
+		top: 400px;
+		margin-left:25px;
+	}
+
+.table
+{
+    width:  100%;
+    
+	border-collapse:collapse;
+}
+
+.th
+{
+    text-align: center;
+   border:1px solid black;
+    /*background: #EEFFEE;*/
+}
+
+.td
+{
+    text-align: left;
+   border:1px solid black;
+}
+th, td {
+height:40px;
+ border:1px solid black;}
+
+
+
+
+
+

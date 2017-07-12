@@ -1,0 +1,21 @@
+.bouton
+{
+width:150px;
+height:30px;
+/*background-color:#7da0f8;*/
+background-color:#ccc;
+border:2px solid #bfbfbf;
+font-family:Calibri;
+font-size:12px;
+border-radius:3px 3px 3px 3px;
+font-weight:bold;
+cursor: pointer;
+}
+.bouton:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+.cursor{
+	cursor: pointer;
+}

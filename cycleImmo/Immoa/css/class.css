@@ -1,0 +1,165 @@
+.menu_Titre
+{
+position:relative;
+top:12px;
+font-family:Times new roman;
+font-size:14px;
+font-weight:bold;
+}
+.label
+{
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+color:#000;
+}
+.label:hover
+{
+cursor:pointer;
+}
+.sous_Titre
+{
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+color:#000;
+}
+.titre
+{
+font-family:Times new roman;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+}
+.bouton
+{
+width:150px;
+height:30px;
+/*background-color:#7da0f8;*/
+background-color:#ccc;
+border:2px solid #bfbfbf;
+font-family:Calibri;
+font-size:12px;
+border-radius:3px 3px 3px 3px;
+font-weight:bold;
+}
+.bouton:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+.label_Evaluation
+{
+font-family:Calibri;
+font-size:12px;
+font-weight:normal;
+color:#000;
+}
+.label_Titre_Evaluation
+{
+width:100%;
+font-family:times new roman;
+font-size:16px;
+font-weight:bold;
+color:#fff;
+background-color:#00698d;
+height:40px;
+}
+.marge_Titre
+{
+position:absolute;
+margin-top:9px;
+left:50px;
+}
+.margin_Code
+{
+position:absolute;
+margin-top:9px;
+right:50px;
+}
+.td_Image
+{
+border-radius:10px 10px 10px 10px;
+font-size:16px;
+border: 0px solid #00698d;
+}
+.label_Question
+{
+font-family:Calibri;
+color:#fff;
+font-size:12px;
+font-weight:bold;
+}
+.label_Oui_Non
+{
+font-family:Calibri;
+color:#fff;
+font-size:12px;
+font-weight:bold;
+}
+.td_Titre_Question
+{
+font-family:Calibri;
+color:#fff;
+background-color:#03a5dc;
+height:40px;
+font-size:12px;
+font-weight:bold;
+}
+.td_titre_message_slide
+{
+font-family:Times new roman;
+font-weight:bold;
+font-size:14px;
+}
+.td_Contenue_Message
+{
+font-family:Calibri;
+font-weight:bold;
+font-size:12px;
+}
+.td_Contenue_Titre_Synthese
+{
+font-family:Calibri;
+color:#fff;
+background-color:#ff0000;
+height:40px;
+font-size:12px;
+font-weight:bold;
+}
+.td_Contenue_Synthese
+{
+font-family:Calibri;
+color:#fff;
+background-color:#880000;
+height:40px;
+font-size:10px;
+font-weight:bold;
+}
+.td_Synthese_F_M_E
+{
+font-family:Calibri;
+color:#fff;
+font-size:12px;
+font-weight:bold;
+background-color:#ff0000;
+}
+.txtarea_B_Sybthese
+{
+border:5px solid #03a5dc;
+}
+.bt_menu
+ {
+width:300px;
+height:50px;
+border:1px solid #ccc;
+background-color:#ddeeff;
+border-radius:3px; 
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+ }
+ .bt_menu:hover
+ {
+ cursor:pointer;
+ }

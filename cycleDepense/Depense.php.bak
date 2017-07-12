@@ -1,0 +1,502 @@
+<?php
+	@session_start(); 
+	include 'connexion.php';
+
+	$mission_id=$_SESSION['idMission'];
+	$reponse=$bdd->query('SELECT ENTREPRISE_ID FROM tab_mission WHERE MISSION_ID='.$mission_id);
+	$donnees=$reponse->fetch();
+
+	$eseId=$donnees['ENTREPRISE_ID'];
+?>
+
+<head>
+	<title>AMS | Cycle dépense</title>
+
+	<link href="cycleDepense/Depenseb/css/div.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depenseb/css/div_db.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depenseb/css/class.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depenseb/css/div_fermer_quest_objectif_db.css" rel="stylesheet" type="text/css" />
+
+	<link href="cycleDepense/Depensea/css/div.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensea/css/div_a.css" rel="stylesheet" type="text/css" />
+
+	<link href="cycleDepense/Depensec/css/div.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensec/css/div_dc.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensec/css/class.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensec/css/div_fermer_quest_objectif_dc.css" rel="stylesheet" type="text/css" />
+
+	<link href="cycleDepense/Depensed/css/div.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensed/css/div_dd.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensed/css/class.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensed/css/div_fermer_quest_objectif_dd.css" rel="stylesheet" type="text/css" /> 
+	<link href="RSCI/assets/css/popup_upload.css" rel="stylesheet" type="text/css" /> 
+
+	<link href="cycleDepense/Depensee/css/div.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensee/css/div_de.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensee/css/class.css" rel="stylesheet" type="text/css" />
+	<link href="cycleDepense/Depensee/css/div_fermer_quest_objectif_de.css" rel="stylesheet" type="text/css" /> 
+	<script type="text/javascript" src="RSCI/assets/js/popup_upload.js"></script>
+	<script>
+		$(function(){
+			$.ajax({ //Debut verificaton validation // ANDO
+				type:'GET',
+				url:'cycleDepense/verification.php',
+				data:{},
+				success:function(e){
+					//alert (e);
+					if(e){
+						//alert(e);
+						var cycl= e.split(",");
+						var longuer= cycl.length;
+						for(var i=0;i<longuer;i++){
+							var res= cycl[i];
+							if(res==1000000){
+								$('div#validate_da').find('#font_label').empty();
+								$('div#validate_dd').css({"width":"55px"});
+								$('td#validate_da').css({"background-color":"#65c122","background-image":"url(img/CHECK.png)","background-repeat":"no-repeat","background-position":"center"});
+								}
+							if(res==23){
+								$('div#validate_db').find('#font_label').empty();
+								$('div#validate_dd').css({"width":"55px"});
+								$('td#validate_db').css({"background-color":"#65c122","background-image":"url(img/CHECK.png)","background-repeat":"no-repeat","background-position":"center"});
+								//$('td#B_Validation_').css({});
+
+							}
+							if(res==24){
+								$('div#validate_dc').find('#font_label').empty();
+								$('td#validate_dc').css({"background-color":"#65c122","background-image":"url(img/CHECK.png)","background-repeat":"no-repeat","background-position":"center"});
+								$('div#validate_dd').css({"width":"55px"});
+							}
+							if(res==25){
+								$('div#validate_dd').find('#font_label').empty();
+								$('div#validate_dd').css({"width":"55px"});
+								$('td#validate_dd').css({"background-color":"#65c122","background-image":"url(img/CHECK.png)","background-repeat":"no-repeat","background-position":"center"});
+							
+							}
+						}				
+					}
+				}
+			});//fn verif 
+			$('#SynthTresorD').click(function(){
+				$.ajax({
+					type:'GET',
+					url:'cycleDepense/synthese.php',
+					success:function(e){
+						$('#ContentSynthAchat').html(e).show();
+						$('#contenue_rsci').hide();
+						$('#contRsciDepense').hide();
+					}
+				});
+			});	
+			$('#Depensea').click(function(){		
+				$('#contenue_rsci').hide();
+				mission_id=document.getElementById("txt_mission_id").value;	
+				enterpriseId=$('#enterpriseId').val();
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensea/php/countPostCycleId.php',
+					data:{mission_id:mission_id},
+					success:function(e){	
+						if(e==0){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensea/form/frmPoste.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#contPosteDa').html(e).show();
+									$('#contRsciDepense').hide();
+								}
+							});
+						}
+						else{
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensea/php/getEseIdMissId.php',
+								data:{mission_id:mission_id},
+								success:function(e1){
+									$.ajax({							
+										type:'POST',
+										url:'cycleDepense/Depensea/form/Interface_da_Secondaire.php',
+										data:{mission_id:mission_id, entrepiseId:e1},
+										success:function(e2){
+											$('#contda').html(e2).show();
+											$('#contRsciDepense').hide();
+										}
+									});
+								}					
+							});
+						}
+					}
+				});	
+			});
+			$('#validate_da').click(function(){
+				mission_id=document.getElementById("mission_id_index").value;
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensea/php/detect_synthese_existant_da.php',
+					data:{mission_id:mission_id},
+					success:function(e){
+						if(e==0){
+							$('#mess_vide_depense').show();
+							document.getElementById("validate_da").disabled=true;
+							document.getElementById("validate_db").disabled=true;
+							document.getElementById("validate_dc").disabled=true;
+							document.getElementById("validate_dd").disabled=true;
+							document.getElementById("validate_de").disabled=true;
+						}
+						else{
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensea/form/Interface_da_Superviseur.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#contSupDa').html(e).show();
+									$('#contRsciDepense').hide();
+								}
+							});	
+						}
+					}
+				});		
+			});
+			//Evenement de l'objectif b Superviseur	
+
+			$('#validate_db').click(function(){
+				
+				mission_id=$("#mission_id_index").val();
+				//alert("cccdDDDD"+mission_id);
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depenseb/php/cpt_db.php',
+					data:{mission_id:mission_id},
+					success:function(e){
+						//alert("eeeee"+e);
+						
+						if(e==15){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depenseb/form/Interface_db_Superviseur.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									//alert("FIN"+e);
+									$('#contSupDb').html(e).show();
+									$('#contRsciDepense').hide();
+								}
+							});
+						}
+						else{
+							$('#mess_vide_depense').show();
+							//document.getElementById("validate_da").disabled=true;
+							//document.getElementById("validate_db").disabled=true;
+							//document.getElementById("validate_dc").disabled=true;
+							//document.getElementById("validate_dd").disabled=true;
+							//document.getElementById("validate_de").disabled=true;
+						}
+					}
+				
+				});
+
+			});
+			
+			$('#validate_dc').click(function(){
+				mission_id=document.getElementById("mission_id_index").value;
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensec/php/cpt_dc.php',
+					data:{mission_id:mission_id},
+					success:function(e){
+						if(e==9){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensec/form/Interface_dc_Superviseur.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#contSupDc').html(e).show();
+									$('#contRsciDepense').hide();
+								}
+							});
+						}
+						else{
+							$('#mess_vide_depense').show();
+							document.getElementById("validate_da").disabled=true;
+							document.getElementById("validate_db").disabled=true;
+							document.getElementById("validate_dc").disabled=true;
+							document.getElementById("validate_dd").disabled=true;
+							document.getElementById("validate_de").disabled=true;
+						}
+					}
+				
+				});
+
+			});
+
+			$('#validate_dd').click(function(){
+				mission_id=document.getElementById("mission_id_index").value;
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensed/php/cpt_dd.php',
+					data:{mission_id:mission_id},
+					success:function(e){
+						if(e==8){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensed/form/Interface_dd_Superviseur.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#contSupDd').html(e).show();
+									$('#contRsciDepense').hide();
+								}
+							});
+						}
+						else{
+							$('#mess_vide_depense').show();
+							document.getElementById("validate_da").disabled=true;
+							document.getElementById("validate_db").disabled=true;
+							document.getElementById("validate_dc").disabled=true;
+							document.getElementById("validate_dd").disabled=true;
+							document.getElementById("validate_de").disabled=true;
+						}
+					}
+				
+				});
+
+			});
+
+			$('#validate_de').click(function(){
+				mission_id=document.getElementById("mission_id_index").value;
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensee/php/cpt_de.php',
+					data:{mission_id:mission_id},
+					success:function(e){
+						if(e==6){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensee/form/Interface_de_Superviseur.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#contSupDe').html(e).show();
+									$('#contRsciDepense').hide();
+								}
+							});
+						}
+						else{
+							$('#mess_vide_depense').show();
+							document.getElementById("validate_da").disabled=true;
+							document.getElementById("validate_db").disabled=true;
+							document.getElementById("validate_dc").disabled=true;
+							document.getElementById("validate_dd").disabled=true;
+							document.getElementById("validate_de").disabled=true;
+						}
+					}
+				
+				});
+
+			});
+
+
+			//Retour au menu poste clé
+			$('#RetourRsciDepense').click(function(){
+				$('#dv_cont_menu_rsci').show();
+				$('#contRsciDepense').hide();
+				$('#transparent').remove();
+				$('#ongulet').fadeTo('slow',1);
+			});
+			//evenement de l'objectif c dans le menu auditeur
+			$('#Depenseb').click(function(){
+				mission_id=document.getElementById("mission_id_index").value;		
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depenseb/php/cpt_db.php',
+					data:{mission_id:mission_id},
+					success:function(e1){
+						if(e1>0){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depenseb/load/load_rep_db.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#frm_tab_res_db').html(e).show();
+									$('#contdb').show();
+									$('#contRsciDepense').hide();
+									$('#Interface_Question_db').hide();
+									$('#dv_table_db').show();
+								}
+							});					
+						}
+						else{
+							$('#contdb').show();
+							$('#contRsciDepense').hide();
+							$('#Interface_Question_db').show();
+						}
+					}
+				});
+			});
+
+			$('#Depensec').click(function(){
+				mission_id=document.getElementById("mission_id_index").value;		
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensec/php/cpt_dc.php',
+					data:{mission_id:mission_id},
+					success:function(e1){
+						if(e1>0){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensec/load/load_rep_dc.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#frm_tab_res_dc').html(e).show();
+									$('#contdc').show();
+									$('#contRsciDepense').hide();
+									$('#Interface_Question_dc').hide();
+									$('#dv_table_dc').show();
+								}
+							});					
+						}
+						else{
+							$('#contdc').show();
+							$('#contRsciDepense').hide();
+							$('#Interface_Question_dc').show();
+						}
+					}
+				});		
+			});
+
+			$('#Depensed').click(function(){
+			mission_id=document.getElementById("mission_id_index").value;		
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensed/php/cpt_dd.php',
+					data:{mission_id:mission_id},
+					success:function(e1){
+						if(e1>0){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensed/load/load_rep_dd.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#frm_tab_res_dd').html(e).show();
+									$('#contdd').show();
+									$('#contRsciDepense').hide();
+									$('#Interface_Question_dd').hide();
+									$('#dv_table_dd').show();
+								}
+							});					
+						}
+						else{
+							$('#contdd').show();
+							$('#contRsciDepense').hide();
+							$('#Interface_Question_dd').show();
+						}
+					}
+				});		
+			});
+
+			$('#Depensee').click(function(){
+			mission_id=document.getElementById("mission_id_index").value;		
+				$.ajax({
+					type:'POST',
+					url:'cycleDepense/Depensee/php/cpt_de.php',
+					data:{mission_id:mission_id},
+					success:function(e1){
+						if(e1>0){
+							$.ajax({
+								type:'POST',
+								url:'cycleDepense/Depensee/load/load_rep_de.php',
+								data:{mission_id:mission_id},
+								success:function(e){
+									$('#frm_tab_res_de').html(e).show();
+									$('#contde').show();
+									$('#contRsciDepense').hide();
+									$('#Interface_Question_de').hide();
+									$('#dv_table_de').show();
+								}
+							});					
+						}
+						else{
+							$('#contde').show();
+							$('#contRsciDepense').hide();
+							$('#Interface_Question_de').show();
+						}
+					}
+				});		
+			});
+		});
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<!--<div id="fond_Sous_Titre" class="menu_Titre">
+		<label class="marge_Titre">Evaluation du contrôle des Depenses</label> <label class="margin_Code">Code : FC5 </label>
+	</div>-->
+<div id="fond_Index" align="center">
+	<table width="100%">
+		<tr>
+			<td class="label_Titre_Evaluation" align="center">
+				<div class="img_cycle"><img src="img/iconswidgets/tresorerie.png"></div>
+				<div class="titre_cycle"><label>Cycle Tr&eacute;sorerie - D&eacute;pense</label></div>
+				<input type="text" id="mission_id_index" value="<?php echo $mission_id; ?>" style="display:none;"/>
+			</td>
+		</tr>
+	</table>
+	<table width="90%">
+		<tr  class="label_Evaluation" height="110" align="center" >
+			<td  width="50%" id="Depensea" <?php if($fonct_id_a>0) echo 'bgcolor=#fff'; else echo'bgcolor="#f5f5f5"';?> class="td_Image">
+				<input type="text" value="<?php echo $mission_id; ?>" id="txt_mission_id"  style="display:none;"/>
+				<img class="label_img a" src="img/alphabet/A.png"></img>
+				<label >Séparation de fonction</label><br />
+			</td>
+			<td class="tdb_button" id="validate_da">
+				<div id="validate_da" class="label_valid"><label id="font_label">Validation</label></div>
+				<!--<input type="button" value="Validation" id="validate_da" class="bouton" />-->
+			</td>
+			<td  id="Depenseb" width="50%" <?php if($b>0) echo 'bgcolor=#fff'; else echo'bgcolor="#f5f5f5"';?> class="td_Image">
+				<img class="label_img b" src="img/alphabet/b.png"></img>
+				<label>Exhaustivité</label>
+			</td>
+			<td class="tdb_button" id="validate_db">
+				<div id="validate_db" class="label_valid"><label id="font_label">Validation</label></div>
+				<!--<input type="button" value="Validation" id="validate_db" class="bouton" />-->
+			</td>
+		</tr>
+		<tr class="label_Evaluation" height="110" align="center">
+			<td  id="Depensec" width="50%" <?php if($c>0) echo 'bgcolor=#fff'; else echo'bgcolor="#f5f5f5"';?> class="td_Image">
+				<img class="label_img c" src="img/alphabet/C.png"></img>
+				<label>Réalité</label><br />
+			</td>
+			<td class="tdb_button" id="validate_dc">
+				<div id="validate_dc" class="label_valid"><label id="font_label">Validation</label></div>
+				<!--<input type="button" value="Validation" id="validate_dc" class="bouton" />-->
+			</td>
+			<td  id="Depensed" width="50%" <?php if($d>0) echo 'bgcolor=#fff'; else echo'bgcolor="#f5f5f5"';?> class="td_Image">
+				<img class="label_img d" src="img/alphabet/D.png"></img>
+				<label>Bonne période</label><br /></td>
+			<td class="tdb_button" id="validate_dd">
+				<div id="validate_dd" class="label_valid"><label id="font_label">Validation</label></div>
+				<!--<input type="button" value="Validation" id="validate_dd" class="bouton" />-->
+			</td>
+		</tr>
+		<tr class="label_Evaluation" height="110" align="center">
+			<td  id="Depensee" width="50%" <?php if($c>0) echo 'bgcolor=#fff'; else echo'bgcolor="#f5f5f5"';?> class="td_Image">
+				<img class="label_img e" src="img/alphabet/E.png"></img>
+				<label>Evaluation</label><br />
+			</td>
+			<td class="tdb_button" id="validate_de">
+				<div id="validate_de" class="label_valid"><label id="font_label">Validation</label></div>
+				<!--<input type="button" value="Validation" id="validate_de" class="bouton" />-->
+			</td>
+		</tr>
+	</table>
+	<br />
+	<iframe style="display:none;" name="uploadFrame"></iframe>	
+	<?php 
+		require_once("./RSCI/layout/modal/modal-flowchart-upload-depense.php") ;
+	?>
+	<input type="button"  class="bouton-md poplight" value="flowchart" data-w="500" target="popup_depense"  style="width: 250px;"/>
+	<input type="button" class="bouton" value="Synthèse du cycle Térsorerie" id="SynthTresorD" style="width: 250px;"/>
+	<input type="button" value="Retour" class="bouton" id="RetourRsciDepense"/>
+	<input type="text" id="enterpriseId" value="<?php echo $eseId; ?>" style="display:none;" />
+	
+	<div id="mess_vide_depense"><?php include 'cycleDepense/Depenseb/sms/mess_non_db.php'; ?></div>
+</div>
+</body>

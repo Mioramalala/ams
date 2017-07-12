@@ -1,0 +1,66 @@
+/* CSS LETTRE DE MISSION*/
+	#entete{
+	
+ position:relative;
+ top:200px;
+ right:110px;
+ width:300px;
+ }
+	
+	h1{
+    font:Book Antiqua;
+    font-size:12px;
+	}
+	h2{
+    font:Book Antiqua;
+    font-size:12px;
+	}
+	h3{
+    font:Book Antiqua;
+    font-size:18px;
+	}
+	#corp{
+	
+ position:relative;
+ 
+ left:90px;
+ width:600px;
+
+	}
+	#p1{
+ position:relative;
+ left:40px;
+ width:560px;
+
+	}
+	#alph{
+ position:relative;
+ left:45px;
+ width:10px;
+
+	}
+	#p2{
+  position:relative;
+ left:60px;
+ width:450px;
+	}#p3{
+ position:relative;
+
+ right:70px;
+
+	}
+#conteneur {
+	
+ position:relative;
+ left:90px;
+ width:200px;
+ 
+ text-align: right;
+text-align: left;
+
+	}	
+	/*border:solid 1px;*/
+
+	
+	
+	

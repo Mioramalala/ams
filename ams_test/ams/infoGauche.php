@@ -1,0 +1,1 @@
+<div id="cotenuG " style="width:434px;height:300px; background:#efefef; border:1px solid #efefef;"> </div>

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* CSS Document */
+#TitreobjCycle
+{
+ width: 100%;
+padding: 10px 0 10px 0;
+background-color: #00698D;
+font-family: Times new roman;
+font-size: 14px;
+font-weight: bold;
+color: #FFF;
+}
+
+
+#Interface_Question_db_Superviseur,
+#Interface_Question_dc_Superviseur,
+#Interface_Question_dd_Superviseur,
+#Interface_Question_de_Superviseur,
+
+#Interface_Question_rb_Superviseur,
+#Interface_Question_rc_Superviseur,
+#Interface_Question_rd_Superviseur,
+#Interface_Question_re_Superviseur,
+
+#Interface_Question_pb_Superviseur,
+#Interface_Question_pc_Superviseur,
+#Interface_Question_pd_Superviseur,
+#Interface_Question_pe_Superviseur,
+
+#Interface_Question_imb_Superviseur,
+#Interface_Question_imc_Superviseur,
+#Interface_Question_imd_Superviseur,
+
+#Interface_Question_vb_Superviseur,
+#Interface_Question_vb,
+#Interface_Question_vc,
+#Interface_Question_vd,
+#Interface_Question_vf,
+#Interface_Question_ve,
+
+#Interface_Question_vb_Superviseur,
+#Interface_Question_vc_Superviseur,
+#Interface_Question_ve_Superviseur,
+#Interface_Question_vd_Superviseur,
+#Interface_Question_vf_Superviseur,
+
+
+
+#Interface_Question_stb_Superviseur,
+#Interface_Question_stc_Superviseur,
+#Interface_Question_std_Superviseur
+{
+    
+    top: 130px !important;
+    left: 1px;
+}
+#table_questionnaire_d_Sup
+{
+    height: 380px;
+}
+
+#Interface_Conclusion_db_Audit,
+#Interface_Conclusion_dc_Audit,
+#Interface_Conclusion_dd_Audit,
+#Interface_Conclusion_de_Audit,
+
+#Interface_Conclusion_rb_Audit,
+#Interface_Conclusion_rc_Audit,
+#Interface_Conclusion_rd_Audit,
+#Interface_Conclusion_re_Audit,
+
+#Interface_Conclusion_pb_Audit,
+#Interface_Conclusion_pc_Audit,
+#Interface_Conclusion_pd_Audit,
+#Interface_Conclusion_pe_Audit,
+
+#Interface_Conclusion_imb_Audit,
+#Interface_Conclusion_imc_Audit,
+#Interface_Conclusion_imd_Audit,
+
+#Interface_Conclusion__stb_Superviseur,
+#Interface_Conclusion__stc_Superviseur,
+#Interface_Conclusion__std_Superviseur,
+
+#Interface_Conclusion_vb_Superviseur,
+#Interface_Conclusion_vb_Audit,
+#Interface_Conclusion_vc_Audit,
+#Interface_Conclusion_vd_Audit,
+#Interface_Conclusion_ve_Audit,
+#Interface_Conclusion_vf_Audit
+ {
+    width: 310px;
+    height: 35px;
+    border: 1px solid #CCC;
+    right: 0px;
+    top: 300px !important;
+    position: relative !important;
+    left: 450px;
+}/* CSS Document */
+

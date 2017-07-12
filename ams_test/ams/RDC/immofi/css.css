@@ -1,0 +1,37 @@
+.grand_Titre{
+font-size:22px;
+color:white;
+background-color:#00698d;
+}
+.bouton
+{
+width:150px;
+height:30px;
+/*background-color:#7da0f8;*/
+background-color:#ccc;
+border:2px solid #bfbfbf;
+font-family:Calibri;
+font-size:12px;
+/*border-radius:3px 3px 3px 3px;*/
+font-weight:bold;
+}
+.bouton:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+.menu_TRS
+{
+border:2px solid #ccc;
+background-color:#6495ED;
+width:350px;
+height:40px;
+border-radius:10px;
+padding-top:15px;
+}
+.bouton_feuille_maitresse{
+width:500px;
+height:40px;
+background-color:#6495ED;
+border-radius:10px;
+}

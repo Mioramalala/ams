@@ -1,0 +1,66 @@
+Searching 16208 files for "http://.$_SERVER['HTTP_HOST']./RSCISynthese_.php?lien"
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_achat_w.php:
+   86  @session_start();
+   87  $idMission=$_SESSION['idMission'];
+   88: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=ACHAT/".$idMission;
+   89  
+   90  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_env_control.php:
+   55  
+   56  $idMission=$_SESSION['idMission'];
+   57: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=ENVIRONMNT_CONTROL/".$idMission;
+   58  
+   59  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_immo_w.php:
+   51  }
+   52  $idMission=$_SESSION['idMission'];
+   53: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=IMMOBILIER/".$idMission;
+   54  
+   55  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_paie.php:
+   53  
+   54  $idMission=$_SESSION['idMission'];
+   55: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=PAIE/".$idMission;
+   56  
+   57  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_stocks.php:
+   53  
+   54  $idMission=$_SESSION['idMission'];
+   55: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=STOCK/".$idMission;
+   56  
+   57  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_system_info.php:
+   56  
+   57  $idMission=$_SESSION['idMission'];
+   58: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=SYSTEM_INFOS/".$idMission;
+   59  
+   60  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_tresorie_depense.php:
+   55  
+   56  $idMission=$_SESSION['idMission'];
+   57: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=DEPENSE/".$idMission;
+   58  
+   59  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_tresorie_recette.php:
+   54  
+   55  $idMission=$_SESSION['idMission'];
+   56: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=RECETTE/".$idMission;
+   57  
+   58  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+/Volumes/C/wamp/www/Dossier_Rapport/Reporting_Word/rsci_ventes.php:
+   55  
+   56  $idMission=$_SESSION['idMission'];
+   57: $lienRSCI="http://".$_SERVER['HTTP_HOST']."/RSCISynthese_.php?lien=VENTE/".$idMission;
+   58  
+   59  $document->setValue('Auditeur',$listAuditeur); //Auditeur
+
+9 matches across 9 files

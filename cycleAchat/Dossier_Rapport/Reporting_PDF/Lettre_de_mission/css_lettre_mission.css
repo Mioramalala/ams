@@ -1,0 +1,49 @@
+/* CSS LETTRE DE MISSION*/
+	#entete{
+	
+ position:relative;
+ top:50px;
+ right:130px;
+ width:200px;
+
+	}
+	#corp{
+	
+ position:relative;
+ 
+ left:90px;
+ width:600px;
+
+	}
+	#p1{
+ position:relative;
+ left:40px;
+ width:560px;
+
+	}
+	#p2{
+ position:relative;
+ float:right;
+ right:118px;
+
+	}#p3{
+ position:relative;
+ float:right;
+ right:70px;
+
+	}
+#conteneur {
+	
+ position:relative;
+ left:90px;
+ width:200px;
+ 
+ text-align: right;
+text-align: left;
+
+	}	
+	/*border:solid 1px;*/
+
+	
+	
+	

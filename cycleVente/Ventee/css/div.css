@@ -1,0 +1,1140 @@
+body
+{
+background-color:#efefef;
+}
+#fond_Sous_Titre
+{
+width:100%;
+height:40px;
+top:1px;
+position:relative;
+border:1px solid #ccc;
+border-radius:1px 1px 1px 1px;
+}
+#fond_Index
+{
+width:100%;
+height:456px;
+position:relative;
+top:0px;
+border:1px solid #ccc;
+border-radius:1px 1px 1px 1px;
+}
+#fond_Question
+{
+width:100%;
+height:456px;
+position:relative;
+top:0px;
+border:1px solid #ccc;
+border-radius:1px 1px 1px 1px;
+}
+#fond_Superviseur_Affiche
+{
+width:100%;
+height:450px;
+position:relative;
+top:0px;
+left:0px;
+border:1px solid #ccc;
+border-radius:1px 1px 1px 1px;
+}
+#image_bleu
+{
+width:100%;
+height:40px;
+background-color:#00698d;
+}
+#interface_ve
+{
+width:100%;
+height:300px;
+position:relative;
+top:0px;
+border:1px solid #ccc;
+}
+#interface_ve_Sup
+{
+width:100%;
+height:410px;
+position:absolute;
+top:125px;
+left:-40px;
+border:1px solid #ccc;
+}
+/*#int_A_Superviseur
+{
+/*overflow:auto;
+width:50%;
+position:relative;
+left:0px;
+background-color:red;
+}*/
+#int_Bouton_Interface_ve
+{
+width:100%;
+height:31px;
+position:absolute;
+top:557px;
+left:-1px;
+border:1px solid #ccc;
+}
+#int_Bouton
+{
+width:100%;
+height:31px;
+position:absolute;
+top:400px;
+left:-3px;
+border:1px solid #ccc;
+}
+#image_Evaluation
+{
+border-radius:8px 8px 8px 8px;
+}
+#interface_Question_A
+{
+width:500px;
+height:440px;
+position:relative;
+top:-600px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#interface_Conclusion_A
+{
+width:500px;
+height:440px;
+position:relative;
+top:-600px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#interface_A_Conclusion_Superviseur
+{
+width:500px;
+height:400px;
+position:absolute;
+top:0px;
+left:300px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#table_Interface_A
+{
+width:100%;
+height:400px;
+overflow:auto;
+position:relative;
+top:0px;
+left:0px;
+}
+#Message_Conclusion_A_Terminer
+{
+width:500px;
+height:130px;
+position:absolute;
+top:130px;
+left:300px;
+background-color:#fff;
+border:1px solid #ccc;
+display:none;
+box-shadow:0px 0px 10px #000;
+}
+#message_Synthese
+{
+width:500px;
+height:130px;
+position:absolute;
+top:0px;
+left:368px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#message_Terminer
+{
+width:500px;
+height:130px;
+position:relative;
+top:-438px;
+background-color:#fff;
+border:1px solid #ccc;
+display:none;
+box-shadow:0px 0px 10px #000;
+}
+#message_Synthese_Terminer
+{
+width:500px;
+height:130px;
+position:absolute;
+top:109px;
+left:369px;
+background-color:#fff;
+border:1px solid #ccc;
+display:none;
+box-shadow:0px 0px 10px #000;
+}
+#message_Terminer_question_ve
+{
+width:500px;
+height:130px;
+position:absolute;
+top:138px;
+left:372px;
+background-color:#fff;
+border:1px solid #ccc;
+display:none;
+box-shadow:0px 0px 10px #000;
+}
+
+#message_Slide
+{
+width:500px;
+height:150px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_Slide_Conclusion_A
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:300px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_Synthese_Slide_ve
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:378px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}   
+#message_Slide_terminer_Question_ve
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:371px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_Sup_Donnees_perdues
+{
+width:500px;
+height:130px;
+position:absolute;
+top:180px;
+left:300px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_Donnees_Perdu
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_Donnees_Perdu_ve
+{
+width:500px;
+height:100px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+background-color:white;
+display:none;
+}
+#message_Terminer_Synthese_ve
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_Fermeture_A
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_A_sup
+{
+width:500px;
+height:130px;
+position:absolute;
+top:128px;
+left:300px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_ve
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_ouvrir_question_objectif_ve
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:block;
+background-color:white;
+}
+#mess_slide_conclusion_ve
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_quest_vide
+{
+width:510px;
+height:100px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve2
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve3
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve4
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve5
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve6
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve7
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve8
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve9
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve10
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve11
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve12
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve13
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve14
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve15
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve16
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve7
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve7
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve19
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve20
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve21
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:270px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve22
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_fermeture_question_ve23
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#message_retour_ve_sup
+{
+width:500px;
+height:130px;
+position:absolute;
+top:109px;
+left:369px;
+background-color:#fff;
+border:1px solid #ccc;
+display:none;
+box-shadow:0px 0px 10px #000;
+}
+#mess_Termine_conclusion_ve_sup
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_valide_conclusion_ve_sup
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_ret_ve_sup
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_enreg_poste_a
+{
+width:500px;
+height:130px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#dragg
+{
+width:491px;
+height:48px;
+background-color:#03a5dc;
+position:relative;
+left:-1px;
+top:3px;
+}
+#image_Achat_A
+{
+position:relative;
+margin-left:-34px;
+}
+#cycle_achat_A:hover
+{
+cursor:pointer;
+}
+#cycle_achat_B:hover
+{
+cursor:pointer;
+}
+#cycle_achat_C:hover
+{
+cursor:pointer;
+}
+#cycle_achat_D:hover
+{
+cursor:pointer;
+}
+#cycle_achat_E:hover
+{
+cursor:pointer;
+}
+#cycle_achat_F:hover
+{
+cursor:pointer;
+}
+/*#A_Validation
+{
+position:absolute;
+margin-left:80px;
+width:100px;
+background-color:#ccc;
+border-radius:3px 3px 3px 3px;
+border:1px solid #ccc;
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+box-shadow:0px 0px 3px #000;
+}*/
+#A_Validation:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+/*#B_Validation
+{
+position:absolute;
+margin-left:80px;
+width:100px;
+background-color:#ccc;
+border-radius:3px 3px 3px 3px;
+border:1px solid #ccc;
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+box-shadow:0px 0px 3px #000;
+}*/
+#B_Validation:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+/*#C_Validation
+{
+position:absolute;
+margin-left:80px;
+width:100px;
+background-color:#ccc;
+border-radius:3px 3px 3px 3px;
+border:1px solid #ccc;
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+box-shadow:0px 0px 3px #000;
+}*/
+#C_Validation:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+/*#D_Validation
+{
+position:absolute;
+margin-left:80px;
+width:100px;
+background-color:#ccc;
+border-radius:3px 3px 3px 3px;
+border:1px solid #ccc;
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+box-shadow:0px 0px 3px #000;
+}*/
+#D_Validation:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+/*#E_Validation
+{
+position:absolute;
+margin-left:80px;
+width:100px;
+background-color:#ccc;
+border-radius:3px 3px 3px 3px;
+border:1px solid #ccc;
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+box-shadow:0px 0px 3px #000;
+}*/
+#E_Validation:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+/*#F_Validation
+{
+position:absolute;
+margin-left:80px;
+width:100px;
+background-color:#ccc;
+border-radius:3px 3px 3px 3px;
+border:1px solid #ccc;
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+box-shadow:0px 0px 3px #000;
+}*/
+#F_Validation:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+#fancybox_ve
+{
+width:100%;
+height:483px;
+background-image:url('cycleAchat/img/fancybox.png');
+position:absolute;
+top:0px;
+left:0px;
+display:none;
+border:1px solid #00698d;
+}
+#fancybox_superviseur
+{
+width:98%;
+height:450px;
+background-image:url('cycleAchat/img/fancybox.png');
+position:absolute;
+top:0px;
+left:20px;
+display:none;
+border:1px solid #00698d;
+}
+#fancybox_sup
+{
+width:59%;
+height:357px;
+position:absolute;
+top:49px;
+left:12px;
+background-image:url('cycleAchat/img/fancybox_sup.png');
+display:block;
+border:2px solid #ccc;
+}
+#Question_ve_1_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_2_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_3_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_4_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_5_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_6_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_7_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_8_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_9_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_10_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_11_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#Question_ve_12_Sup
+{
+width:500px;
+height:440px;
+position:absolute;
+top:60px;
+left:370px;
+background-color:#00698d;
+border:5px solid #fff;
+display:none;
+}
+#img_vide
+{
+position:relative;
+top:20px;
+left:-10px;
+}
+#mess_vide_synthese_A
+{
+width:510px;
+height:100px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_vide_conclusion_A
+{
+width:510px;
+height:100px;
+position:absolute;
+top:108px;
+left:300px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_vide_synthese_ve
+{
+width:510px;
+height:100px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#fermer_mess_vide_synth_A
+{
+position:absolute;
+top:-15px;
+left:496px;
+}
+#fermer_mess_vide_conclus_A
+{
+position:absolute;
+top:-15px;
+left:496px;
+}
+#fermer_mess_synth_vide_ve
+{
+position:absolute;
+top:-15px;
+left:496px;
+}
+#mess_vide_a
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:371px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_vide_ve
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:371px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_vide_obj_ve
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:371px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_pas_synth
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:371px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_synth_non
+{
+width:500px;
+height:150px;
+position:absolute;
+top:130px;
+left:371px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}
+#mess_vide_vente
+{
+width:500px;
+height:150px;
+position:absolute;
+top:108px;
+left:369px;
+border:1px solid #ccc;
+box-shadow:0px 0px 10px #000;
+display:none;
+background-color:white;
+}

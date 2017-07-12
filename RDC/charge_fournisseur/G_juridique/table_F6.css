@@ -1,0 +1,31 @@
+.titreSelect{
+    font-weight: bold;
+    height: 20px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contentTab{
+	overflow-x: auto;
+	overflow-y: hidden; 
+	height: 430px;
+	width: 930px;
+}
+.contentTab table{
+	border-collapse: collapse;
+}
+.contentTab td{
+	border: 1px solid #ccc;
+	font-size: 9pt;
+}
+.contentAfterCheckTab,.contentCheckTab{
+	overflow-y: auto;
+	overflow-x: hidden; 
+	height: 400px;
+}
+.contentCheckTab{
+	width: 1100px;
+}
+.contentAfterCheckTab{
+	width: 1500px;
+}

@@ -1,0 +1,40 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+d:read_nested_list("/home/jimmy/Bureau/matrice.txt",space)$
+
+x0:0 $ y0:0 $ dx:5/26 $ dy:5/26 $
+
+for i from 1 thru 27 do(xg[i]:x0+(i-1)*dx, yg[i]:y0+(i-1)*dy) $
+
+g(x,y):=block(
+	nx:'floor((x-x0)/dx+1), if (nx=27) then nx:26,
+	nx1:nx+1,
+	ny:'floor((y-y0)/dy+1), if (ny=27) then ny:26,
+	ny1:ny+1,
+
+	rx:(x-xg[nx])/dx, 
+	ry:(y-yg[ny])/dy,
+
+	(1-rx)*(1-ry)*'d[ny][nx]+rx*(1-ry)*'d[ny][nx1]+(1-rx)*ry*'d[ny1][nx]+rx*ry*'d[ny1][nx1]
+)$
+
+u(x,y) := 1/2*(y*x+((y+2)^2)/4)*cos(y*x^1/2+((y+2)^2)/4)$
+
+plot3d(g(x,y),[x,0,4],[y,0,4]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+
+i=1;
+load(graphs)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g2:create_graph([1,2,3,4],[[1,2]],directed=true);
+draw_graph(g2,show_id=true,vertex_type=square,vertex_color=blue,head_angle=10,head_length=0.05);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

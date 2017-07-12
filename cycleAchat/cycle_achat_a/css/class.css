@@ -1,0 +1,314 @@
+@font-face{
+font-family: font_TE;
+src: url("Exo2.0-Regular.otf");
+}
+
+table{
+	border-collapse: collapse;
+}
+
+/*label{
+	font-family: font_TE;
+}*/
+
+.tdb_button{
+	background-color: #3d525f;
+	padding: 20px;
+}
+.tdb_button:hover{
+	opacity: 0.7;
+}
+.titre_cycle{
+	font-family: font_TE;
+	font-size: 1.5em;
+	left: 15%;
+	position: absolute;
+	top: 10px;
+	color: #89ccf8;
+}
+.img_cycle{
+	left: 9%;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 2px;
+	overflow: hidden;
+
+}
+/***************VALIDATION******************/
+.tdb_button_pret{
+	background-color: #7ba4be;
+}
+
+.tdb_button_ok{
+	background-color: #65c121;
+}
+/*******************************************/
+.menu_Titre
+{
+position:relative;
+top:12px;
+font-family:Times new roman;
+font-size:14px;
+font-weight:bold;
+}
+.label
+{
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+color:#000;
+}
+.label:hover
+{
+cursor:pointer;
+}
+.sous_Titre
+{
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+color:#000;
+}
+.titre
+{
+font-family:Times new roman;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+}
+
+.label_valid{
+	color: #fff;
+}
+
+#font_label{
+	font-size: 1.2em;
+	width: 150px;
+}
+
+.label_img{
+	position: absolute;
+	width: 59px;
+	height: 106px;
+	left: 5.1%;
+	top:11%;
+}
+
+.label_img.b{
+	left:50%;
+}
+
+.label_img.ba{
+	left: 50.3%;
+}
+
+.label_img.da{
+	top:35.5%;
+	left: 50.3%;
+}
+
+.label_img.fa{
+	top: 60%;
+	left: 50.3%;
+}
+
+
+.label_img.c{
+	top:35.5%;
+}
+
+.label_img.d{
+	top: 35.5%;
+	left: 50%;
+}
+
+.label_img.e{
+	top: 60%;
+}
+
+.label_img.f{
+	top: 60%;
+	left: 50%;
+}
+
+#bt_ret_menu_index, #RetourRsciVente, #RetourRsciPaie, #RetRsci, #RetourRsci, #RetourRsciRecette, #RetourRsciDepense{
+	border-radius: 12px;
+	position: absolute;
+	right:8%;
+	height: 45px;
+	color: #fff;
+	font-size: 1em;
+	border: 0px;
+}
+
+#bt_ret_menu_index:hover{
+	color: #000000;
+}
+
+#SynthAchat, #SynthVente, #SynthPaie, #SynthImmo, #SynthStock, #SynthTresorR, #SynthTresorD {
+	border-radius: 12px;
+	position: absolute;
+	right: 20%;
+	height: 45px;
+	color: #fff;
+	font-size: 1em;
+	border: 0px;
+	background-color: #2da4f3;
+}
+
+#SynthAchat:hover, #SynthVente:hover, #SynthPaie:hover, #SynthImmo:hover, #SynthStock:hover , #SynthTresorR:hover, #SynthTresorD:hover{
+	background-color:#ccc;
+}
+
+.bouton
+{
+width:150px;
+height:30px;
+/*background-color:#7da0f8;*/
+background-color:#ccc;
+border:2px solid #bfbfbf;
+font-family:Calibri;
+font-size:12px;
+border-radius:3px 3px 3px 3px;
+font-weight:bold;
+}
+.bouton:hover
+{
+background-color:#fff;
+cursor:pointer;
+}
+
+.bouton-md{
+	border-radius: 12px;		
+	height: 45px;
+	color: #fff;
+	font-size: 1em;
+	border: 0px;
+	background-color: #2da4f3;	
+}
+.bouton-md:hover{
+	background-color: #ccc;	
+}
+
+.label_Evaluation
+{
+font-family:Calibri;
+font-size:12px;
+font-weight:normal;
+color:#000;
+border-bottom: 1px solid #cccccc;
+}
+/*******************************************************JDGJHFDGHSLKJ***************************************************/
+.label_Titre_Evaluation
+{
+width:100%;
+font-family:font_TE;
+font-size:16px;
+font-weight:bold;
+color:#fff;
+background-color:#00698d;
+height:40px;
+}
+.marge_Titre
+{
+position:absolute;
+margin-top:10px;
+left:10%;
+}
+.margin_Code
+{
+position:absolute;
+margin-top:9px;
+right:50px;
+}
+.td_Image
+{
+font-size:20px;
+border: 0px solid #00698d;
+}
+/***************HOVER BOUTON A, B, ....*****************/
+.td_Image:hover{
+	background-color: #cccccc;
+}
+/**********************************/
+.label_Question
+{
+font-family:Calibri;
+color:#fff;
+font-size:12px;
+font-weight:bold;
+}
+.label_Oui_Non
+{
+font-family:Calibri;
+color:#fff;
+font-size:12px;
+font-weight:bold;
+}
+.td_Titre_Question
+{
+font-family:Calibri;
+color:#fff;
+background-color:#03a5dc;
+height:40px;
+font-size:12px;
+font-weight:bold;
+}
+.td_titre_message_slide
+{
+font-family:Times new roman;
+font-weight:bold;
+font-size:14px;
+}
+.td_Contenue_Message
+{
+font-family:Calibri;
+font-weight:bold;
+font-size:12px;
+}
+.td_Contenue_Titre_Synthese
+{
+font-family:Calibri;
+color:#fff;
+background-color:#ff0000;
+height:40px;
+font-size:12px;
+font-weight:bold;
+}
+.td_Contenue_Synthese
+{
+font-family:Calibri;
+color:#fff;
+background-color:#880000;
+height:40px;
+font-size:10px;
+font-weight:bold;
+}
+.td_Synthese_F_M_E
+{
+font-family:Calibri;
+color:#fff;
+font-size:12px;
+font-weight:bold;
+background-color:#ff0000;
+}
+.txtarea_B_Sybthese
+{
+border:5px solid #03a5dc;
+}
+.bt_menu
+ {
+width:300px;
+height:50px;
+border:1px solid #ccc;
+background-color:#ddeeff;
+border-radius:3px; 
+font-family:Calibri;
+font-size:12px;
+font-weight:bold;
+ }
+ .bt_menu:hover
+ {
+ cursor:pointer;
+ }

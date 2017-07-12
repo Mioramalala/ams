@@ -1,0 +1,39 @@
+<script>
+$(function(){
+	$('#enreg_conclus_ferm_db').click(function(){
+		if((document.getElementById("commentaire_Question_db_sup_conclusion").value=="") || (document.getElementById("rad_Conclus_Faible_db").checked==false && document.getElementById("rad_Conclus_Moyen_db").checked==false && document.getElementById("rad_Conclus_Eleve_db").checked==false)){
+			$('#mess_empty_conclus_db').show();
+			$('#mess_Termine_conclusion_db_sup').hide();
+		}
+		else{
+			mission_id=document.getElementById("tx_miss_conc_db").value;	
+			commentaire=document.getElementById("commentaire_Question_db_sup_conclusion").value;
+			risque="faible";
+			if(document.getElementById("rad_Conclus_Faible_db").checked==true){
+			risque="faible";
+			}
+			if(document.getElementById("rad_Conclus_Moyen_db").checked==true){
+			risque="moyen";
+			}	
+			if(document.getElementById("rad_Conclus_Eleve_db").checked==true){
+			risque="eleve";
+			}
+			obj_concl_id_db=0;
+			$.ajax({
+				type:'POST',
+				url:'cycleDepense/Depenseb/php/detect_concl_id_db.php',
+				data:{mission_id:mission_id},
+				success:function(e){
+					obj_concl_id_db=e;
+					if(obj_concl_id_db==0){
+						$.ajax({
+							type:'POST',
+							url:'cycleDepense/Depenseb/php/enreg_concl_db.php',
+							data:{commentaire:commentaire, risque:risque, mission_id:mission_id},
+							success:function(){
+							}			
+						});
+					}
+					else{
+						$.ajax({
+							type:'

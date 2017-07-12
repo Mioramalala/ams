@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+#TitreobjACHATVALID
+{
+ width: 100%;
+padding: 10px 0 10px 0;
+background-color: #00698D;
+font-family: Times new roman;
+font-size: 14px;
+font-weight: bold;
+color: #FFF;
+}
+
+
+#Interface_Question_acb_Superviseur,
+#Interface_Question_c_Superviseur,
+#Interface_Question_d_Superviseur,
+#Interface_Question_e_Superviseur,
+#Interface_Question_f_Superviseur
+{
+    
+    top: 130px !important;
+    left: 1px;
+}
+#table_questionnaire_d_Sup,
+#table_questionnaire_c_Sup,
+#table_questionnaire_e_Sup,
+#table_questionnaire_f_Sup
+{
+    
+    height: 380px;
+}
+
+#Interface_Conclusion_acb_Audit,
+#Interface_Conclusion_c_Audit,
+#Interface_Conclusion_d_Audit,
+#Interface_Conclusion_e_Audit,
+#Interface_Conclusion_f_Audit
+ {
+    width: 310px;
+    height: 35px;
+    border: 1px solid #CCC;
+    right: 0px;
+    top: 300px;
+    position: relative !important;
+    left: 450px;
+}

@@ -1,0 +1,72 @@
+<?php
+
+?>
+<script>
+$(function(){
+	$('#Synthese_aca_Precedent').click(function(){
+		$('#message_Synthese_aca').hide();
+		$('#fancybox_aca').hide();
+	});
+	$('#Synthese_aca_Terminer').click(function(){
+		if((document.getElementById("txt_Synthese_aca").value=="") || (document.getElementById("rd_Synthese_aca_Faible").checked==false && document.getElementById("rd_Synthese_aca_Moyen").checked==false && document.getElementById("rd_Synthese_aca_Eleve").checked==false)){
+			$('#mess_vide_synthese_aca').show();
+			$('#message_Synthese_aca').hide();
+		}
+		else{
+			$('#message_Synthese_Terminer').show();
+			$('#message_Synthese_aca').hide();
+		}
+	});
+	$('#fermer_Synthese_aca').click(function(){
+		$('#message_Synthese_aca').hide();
+		$('#fancybox_aca').hide();
+	});
+	$("textarea").attr("placeholder", "Veuillez remplir ce champ");
+
+});
+
+</script>
+<div id="int_Synhtese_aca">
+	
+	<table width="500">
+		<tr>
+			<td>
+				<table width="139">
+					<tr style="height:20px;" bgcolor="#05abe1">
+						<td class="label_Question" align="center">
+							Niveau de risque :<br /><br />
+							<table>
+								<tr>
+									<td class="label_Question">
+										<input type="radio" id="rd_Synthese_aca_Faible" name="rd_Synthese_aca" <?php if($conclusionId!=0) echo 'disabled'; ?> />Faible<br />
+										<input type="radio" id="rd_Synthese_aca_Moyen" name="rd_Synthese_aca" <?php if($conclusionId!=0) echo 'disabled'; ?> />Moyen<br />
+										<input type="radio" id="rd_Synthese_aca_Eleve" name="rd_Synthese_aca" <?php if($conclusionId!=0) echo 'disabled'; ?> />Elevé
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td height="234"></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td class="td_Titre_Question"><textarea id="txt_Synthese_aca" cols="40" rows="20" <?php if($conclusionId!=0) echo 'disabled'; ?> ></textarea>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="button" id="Synthese_aca_Precedent" value="Annuler" class="bouton" />&nbsp;&nbsp;&nbsp;
+				<input type="button" id="Synthese_aca_Terminer" value="Terminer" class="bouton" <?php if($conclusionId!=0) echo 'disabled'; ?> />
+			</td>
+		</tr>
+	</table>
+<div id="fermer_Synthese_aca"></div>
+</div>

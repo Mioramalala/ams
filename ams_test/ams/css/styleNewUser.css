@@ -1,0 +1,139 @@
+#cadreUtilisateur
+{
+	background-color: #FFFFFF;
+    height: 560px;
+    width: 100%;
+}
+#titreUser, #titreUser2, #titreUser3{
+	color: #0670bc;
+	margin-left: 30px;
+	font-size: 18pt;
+    font-weight: bolder;
+	text-align: left;
+	padding-bottom: 10px;
+	padding-top: 0;
+}
+#listUtil{
+	padding-top: 10px;
+	width: 875px;
+	margin: 0 auto;
+	height: 320px;
+}
+#pllist{
+	width:875px;
+	height:250px;
+	margin: 0px auto;
+	overflow-y:auto;
+	overflow-x:hidden;
+	border: 1px solid #ccc;
+}
+table#listUser{
+	border-collapse:collapse;
+	width:875px;
+	box-shadow: 4px 0 8px 0px #ccc inset;
+}
+#listUser tr:hover{
+	background-color:#87CEEB;
+	cursor:pointer;
+}
+#listUser td
+{
+	border-bottom:2px solid #ccc;
+	font-size: 9pt;
+	font-weight: bold;
+}
+#nouvelUser
+{
+	padding-top: 10px;
+	height: 190px;
+	width: 875px;
+	margin: 0 auto;
+}
+#tblUtilisateur 
+{
+	width:875px;
+}
+#LoginUtil, #mdpUtil, #nomUtil, #confmdp
+{
+	width:200px;
+	height:40px;
+	border-radius:7px;
+	border: 1px solid #ccc;
+	background-color: #ececec;
+}
+select#statUtil, select#Actif
+{
+	width:200px;
+	border-radius:7px;
+	border: 0;
+	margin-top: 10px;
+	background-color: transparent;
+}
+#btnSavMod, #engNewUtil, #AnnulUtil
+{
+	width:120px;
+	height:40px;
+	border-radius:10px;
+	color:white;
+	background-color:#9E9E9E;
+	font-size: 100%;
+	font-weight: bold;
+	border: 0;
+}
+#engNewUtil:hover, #AnnulUtil:hover, #btnSavMod:hover
+{
+	background-color:#007FFF;
+	cursor:pointer;
+}
+/**************************CLASS**************************************/
+.hide_select{
+	width:150px;
+	height:40px;
+	overflow: hidden;
+	border-radius:7px;
+	border: 1px solid #ccc;
+	background: url('../img/dropdown_arrow.png') no-repeat;
+    background-position: 120px 15px;
+	background-size: 10%;
+}
+.nouvUser
+{
+	color:#9E9E9E;
+	font-size: 11pt;
+}
+.boutonFerme:hover {
+	cursor: pointer;
+	border: 1px solid #d3d3d3;
+	background-color: #e7e7e7;
+}
+.boutonFerme{
+    margin-left: 1120px;
+    margin-top: 25px;
+    padding: 2px;
+    position: fixed;
+	border: 1px solid white;
+}
+.iconeU
+{
+	position: fixed;
+	margin-left: 1120px;
+    margin-top: 80px;
+    padding: 6px;
+	border: 1px solid white;
+}
+.iconeU:hover
+{
+	cursor:pointer;
+	border: 1px solid #ff9898;
+	background-color: #fdffc3;
+}
+.deconUser{
+margin-left:-50px;
+background-color:#025387;
+border-radius:5px;
+}
+
+.deconUser:hover{
+cursor:pointer;
+background-color:red;
+}
