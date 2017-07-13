@@ -16,7 +16,7 @@ $(function(){
 			mission_id=document.getElementById("txt_mission_id_de").value;
 			commentaire=document.getElementById("txt_Synthese_de").value;
 			var echo_score_de=$("#echo_score_de").text();
-			alert(echo_score_de);
+			//alert(echo_score_de);
 			risque="faible";
 			if(document.getElementById("rd_Synthese_de_Faible").checked==true){
 				risque="faible";

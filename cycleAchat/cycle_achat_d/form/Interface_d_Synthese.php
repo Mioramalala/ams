@@ -115,7 +115,7 @@ $(function(){
 			<td></td>
 			<td>
 				<input type="button" id="Synthese_d_annuler" value="Annuler" class="bouton" />&nbsp;&nbsp;&nbsp;
-				<input type="button" id="Synthese_d_Terminer" value="Terminer" class="bouton" <?php if($conclusionIdd!="") echo 'disabled';?> />
+				<input type="button" id="Synthese_d_Terminer" value="Terminer" class="bouton" <?php //if($conclusionIdd!="") echo 'disabled';?> />
 			</td>
 		</tr>
 	</table>
