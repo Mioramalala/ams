@@ -108,7 +108,9 @@
 			$document->setValue($lettre_objectif.$num_ligne, $qcm);
 			$document->setValue('CM'.$lettre_objectif.$num_ligne, decoder($comment));
 			$num_ligne= $num_ligne+1;
+
 		}
+		//print $num_ligne;
 	}
 
 	function remplirSynthese($document, $lettre_objectif, $cycle_id, $mission_id){

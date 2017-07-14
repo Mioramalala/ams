@@ -143,9 +143,6 @@ alert(data);
 
 			//LISTE RSCI -CYCLE ACHAT ======================================
 	  $("#btn_ltr_cycle_achat").click(function () { 
-	  alert('ok');
-
-
         if ($('#icone_achat').length) {
             if (confirm('Le fichier existe deja, voulez-vous l\'ecraser?')) {
                 $.ajax({
